@@ -1,0 +1,9 @@
+$(document).ready()
+{
+    $("body").delegate("#carousel-click","click",function()
+{
+    console.log("MTF");
+    $(this).parent().find('.active-highlight-selected').removeClass('active-highlight-selected');
+    $(this).addClass('active-highlight-selected');
+})
+}
