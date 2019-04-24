@@ -201,14 +201,14 @@ body
 #news-third .row .col-lg-9 .col-lg-4 button
 {
     position: absolute;
-    top: 53%;
+    top: 45%;
     left: 8.675%;
     overflow: hidden;
 }
 #news-third .row .col-lg-9 .col-lg-4 .category-title
 {
     position: absolute;
-    top:70%;
+    top:62%;
     overflow: hidden;
     
 }
