@@ -9,4 +9,8 @@ router.get('/news', function(req, res, next) {
   res.render('news', { title: 'News' });
 
 });
+router.get('/admin/dashboard', function(req, res, next) {
+  res.render('dashboard', { title: 'News' });
+
+});
 module.exports = router;
