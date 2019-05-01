@@ -4,10 +4,28 @@ body
     margin: 0;
     background-color: #f3f4f7!important;
 }
-.first-line
+
+#header-contact
 {
-    border: 5px solid red;
-    margin: 0;
+    background-color: #007BFF;
+}
+#header-contact .header-contact-content i
+{
+    color: #000000;
+    margin-right: 6px;
+    font-size: 20px;
+}
+#header-contact .header-contact-content span
+{
+    color: white;
+    margin-right: 6px;
+    font-weight: normal;
+    font-size: 14px;
+    
+}
+#header-contact .header-contact-content-rightside button
+{
+    font-size: 14px;
 }
 #menu .nav-bar .navbar .navbar-nav li
 {
