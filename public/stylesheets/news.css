@@ -3,10 +3,33 @@ body
     padding: 0;
     margin: 0;
 }
-.first-line
+#header-contact
 {
-    border: 5px solid red;
-    margin: 0;
+    background-color: #007BFF;
+ 
+}
+#header-contact .header-contact-content
+{
+
+    
+}
+#header-contact .header-contact-content i
+{
+    color: #000000;
+    margin-right: 6px;
+    font-size: 20px;
+}
+#header-contact .header-contact-content span
+{
+    color: white;
+    margin-right: 6px;
+    font-weight: normal;
+    font-size: 14px;
+    
+}
+#header-contact .header-contact-content-rightside button
+{
+    font-size: 14px;
 }
 #menu .nav-bar .navbar .navbar-nav li
 {
@@ -25,6 +48,98 @@ body
 {
     width: 64px;
     border-radius: 50%;
+}
+#news .news-content .content-news img
+{
+    max-width: 100%;
+    height: auto;
+}
+#side-bar .side-bar-container
+{
+    background: #fff;
+
+}
+#side-bar .side-bar-container .side-bar-container-heading-main
+
+{
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+
+    border-radius: 15px 0 0;
+    position: relative;
+    z-index: 1;
+}
+#side-bar .side-bar-container .side-bar-container-heading-main .side-bar-container-heading
+{
+    margin-top: -24px;
+    position: relative;
+}
+#side-bar .side-bar-container .side-bar-container-heading-main .side-bar-container-heading h3
+{
+    min-width: 140px;
+    padding: 11px 15px;
+    display: inline-block;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 13px 15px;
+    border-radius: 20px 0;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0px 0px 0 4px #f3f4f7;
+    min-width: 150px;
+    text-align: center;
+    line-height: 24px;
+}
+#side-bar .side-bar-container .side-bar-container-content ul li img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 8px;
+    background-size: cover;
+    background-position: center;
+}
+#side-bar .side-bar-container .side-bar-container-content ul
+{
+    list-style-type: none;
+    padding: 8px;
+}
+#side-bar .side-bar-container .side-bar-container-content ul li
+{
+    margin-bottom: 15px;
+}
+#side-bar .side-bar-container .side-bar-container-content ul li a:hover
+{
+    text-decoration: none;
+}
+#side-bar .side-bar-container .side-bar-container-content ul li a .side-bar-container-content-title
+{
+   color: black;
+   display: inline;
+   
+}
+#side-bar .side-bar-container .side-bar-container-content ul li a .side-bar-container-content-title h4
+{
+    font-size: 15px;
+    margin-bottom: 2px;
+    
+}
+#side-bar .side-bar-container .side-bar-container-content ul li a .side-bar-container-content-title h4:hover
+{
+    color:#FFC107;
+}
+
+#side-bar .side-bar-container .side-bar-container-content ul li a .side-bar-container-content-title i
+{
+    color: #FFC107;
+}
+#side-bar .side-bar-container .side-bar-container-content ul li a .side-bar-container-content-title span
+{
+    color: black;
+    font-size: 12px;
+    
 }
 #footer
 {

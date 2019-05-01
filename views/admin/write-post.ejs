@@ -179,22 +179,30 @@
                     <div class="ml-4">
                         <label for="" class="">Tags: </label>
                         <input type="text" value="Classic,Sales" data-role="tagsinput">
-
+                        <a href="#" id="btn-submit" class=" btn btn-warning  btn-icon-split">
+                            <span class="icon text-white  ">
+                                <i class="fa fa-rocket"></i>
+                            </span>
+                            <span class="text">Submit your post</span>
+                        </a>
                     </div>
-                    <a href="#" class="btn btn-warning mr-4 mb-2 btn-icon-split">
-                        <span class="icon text-white  ">
-                            <i class="fa fa-rocket"></i>
-                        </span>
-                        <span class="text">Submit your post</span>
-                    </a>
-                </div>
 
+
+                </div>
+                <div class=" form-group ml-5 w-50 mt-3">
+
+                    <label for="inputTitle">Title: </label>
+
+
+                    <input type="text" class="form-control font-weight-bold" id="inputAddress" placeholder="Best Car Evers - One Direction">
+
+                </div>
                 <!-- /.container-fluid -->
                 <div class="row d-flex justify-content-center">
                     <textarea name="editor1" id="editor1">&lt;p&gt;Blow your mind&lt;/p&gt;</textarea>
                     <script>
                         CKEDITOR.replace('editor1');
-                        CKEDITOR.config.width = "92%";
+                        CKEDITOR.config.width = "93%";
                         CKEDITOR.config.height = 850;
                     </script>
 
@@ -228,6 +236,7 @@
     <% include template/logout-modal.ejs %>
         <!-- Bootstrap core JavaScript-->
         <% include template/footer-admin.ejs%>
+            <script src="../../javascripts/write-post.js"></script>
 
 </body>
 

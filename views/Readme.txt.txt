@@ -1,1 +1,0 @@
-thong so quan trong.
