@@ -29,6 +29,14 @@ router.get('/admin/write-post', function(req, res, next) {
   res.render('write-post', { title: 'News' });
 
 });
+router.get('/category-:cat', function(req, res, next) {
+  res.render('page',{category:req.params.cat});
+
+});
+router.get('/category-:cat/:kind', function(req, res, next) {
+  res.render('page-kind',{category:req.params.cat,kind:req.params.kind});
+
+});
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login to be our users' });
 

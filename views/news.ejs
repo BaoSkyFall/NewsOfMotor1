@@ -46,59 +46,83 @@
     </section>
     <% datanews.News.forEach(function(baiviet){%>
         <% if(baiviet.title === title){ %>
-    <header id="menu" class="container">
-        <div class="logo d-flex justify-content-center">
-            <a href="/">
-                <img src="../../../images/logo2.png" class="img-fluid" alt="">
-            </a>
-        </div>
-        <div class="nav-bar">
-            <nav class="navbar navbar-expand-sm navbar-light">
-
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Be posted</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact us</a>
-
-                        </li>
-                    </ul>
-
-                </div>
-            </nav>
-        </div>
-        <div class="tile-news">
-            <p>Home > News > <%=baiviet.category %> > <% baiviet.title %></p>
-            <h2><%=baiviet.title %>
-            </h2>
-        </div>
-
-    </header>
+            <header id="menu" class="container-fluid">
+                    <div class="logo d-flex justify-content-center">
+                        <a href="/">
+                            <img src="./images/logo2.png" class="img-fluid" alt="">
+            
+                        </a>
+                    </div>
+            
+            
+                    <div class="nav-bar container">
+                        <nav class="navbar navbar-expand-sm navbar-light">
+            
+                            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/category-humor" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                                            Humor
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/category-humor/funny">Funny</a>
+                                            <a class="dropdown-item" href="/category-humor/weird">Weird</a>
+            
+                                        </div>
+                                    </li>
+            
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/category-supercars" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Supercars
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/category-supercars/on top">On top</a>
+                                            <a class="dropdown-item" href="/category-supercars/celebrity">Celebrity</a>
+            
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/category-motor" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Motor
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/category-motor/motorcycles">Motorcycles</a>
+                                            <a class="dropdown-item" href="/category-motor/motorhomes">Motorhomes</a>
+            
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="/category-modern" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Modern
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/category-modern/technology">Technology</a>
+                                            <a class="dropdown-item" href="/category-modern/special">Special</a>
+            
+                                        </div>
+                                    </li>
+                                </ul>
+            
+                            </div>
+                        </nav>
+                    </div>
+            
+                </header>
     <section>
 
         <div class="owl-carousel owl-theme owl-loaded">
             <div class="owl-stage-outer">
                 <div class="owl-stage">
                     <div class="owl-item">
-                        <img src="../../../images/xe-lon-1.jpg" alt=""> </div>
-                    <div class="owl-item">
+                        <img src="<%=baiviet.img %>" alt=""> </div>
+                    <!-- <div class="owl-item">
                         <img src="../../../images/xe-lon-2.jpg" alt=""> </div>
                     <div class="owl-item">
                         <img src="../../../images/xe-lon-3.jpg" alt=""> </div>
@@ -107,7 +131,7 @@
                     <div class="owl-item">
                         <img src="../../../images/xe-lon-5.jpg" alt=""> </div>
                     <div class="owl-item">
-                        <img src="../../../images/xe-lon-6.jpg" alt=""> </div>
+                        <img src="../../../images/xe-lon-6.jpg" alt=""> </div> -->
 
                 </div>
 

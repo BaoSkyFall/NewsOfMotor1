@@ -40,7 +40,9 @@
 
   <header id="menu" class="container-fluid">
     <div class="logo d-flex justify-content-center">
-      <img src="./images/logo2.png" class="img-fluid" alt="">
+      <a href="/">
+        <img src="./images/logo2.png" class="img-fluid" alt="">
+      </a>
     </div>
 
 
@@ -56,20 +58,46 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Be posted</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/category-humor" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Humor
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/category-humor/funny">Funny</a>
+                <a class="dropdown-item" href="/category-humor/weird">Weird</a>
 
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/category-supercars" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Supercars
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/category-supercars/on top">On top</a>
+                <a class="dropdown-item" href="/category-supercars/celebrity">Celebrity</a>
+
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/category-motor" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Motor
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/category-motor/motorcycles">Motorcycles</a>
+                <a class="dropdown-item" href="/category-motor/motorhomes">Motorhomes</a>
 
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/category-modern" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Modern
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/category-modern/technology">Technology</a>
+                <a class="dropdown-item" href="/category-modern/special">Special</a>
+
+              </div>
             </li>
           </ul>
 
@@ -83,37 +111,53 @@
       <div class="col-lg-9">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="images/xe-lon-1.jpg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Genesis Essentia Might Arrive In 2021, Company Boss Hints
-                </h2>
-                <p>Concepts come and go, and while some are more exciting than others, most sink into oblivion without hearing
-                  about them ever again. </p>
+            <%{ %>
+              <div class="carousel-item active">
+                <a href="/news/<%=datanews.News[0].title %>">
+                  <img class="d-block w-100" src="<%=datanews.News[0].img %>" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      <%=datanews.News[0].title %>
+                    </h2>
+                    <p>
+                      <%=datanews.News[0].title %>
+                        <%=datanews.News[1].title %>
+                    </p>
+                  </div>
+                </a>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="images/xe-lon-2.jpg" alt="Second slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Bugatti La Voiture Noire Debuts: Most Expensive New Car Ever
+              <div class="carousel-item">
+                <a href="/news/<%=datanews.News[13].title %>">
+                  <img class="d-block w-100" src="<%=datanews.News[13].img %>" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      <%=datanews.News[13].title %>
 
 
-                </h2>
-                <p>A modern interpretation of Jean Bugatti’s personal Type 57 SC Atlantic that got lost during World War II,
-                  the stunning grand tourer is described by the manufacturer from Molsheim as being the most expensive new
-                  car ever sold</p>
+                    </h2>
+                    <p>
+                      <%=datanews.News[13].title %>
+                        <%=datanews.News[0].title %>
+                    </p>
+                  </div>
+                </a>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="images/xe-lon-3.jpg" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform
+              <div class="carousel-item">
+                <a href="/news/<%=datanews.News[2].title %>">
+                  <img class="d-block w-100" src="<%=datanews.News[2].img %>" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      <%=datanews.News[2].title %>
 
-                </h2>
-                <p>The next generation Toyota 86 and Subaru BRZ will remain rear wheel drive, but they won't be built on a Subaru
-                  platform. That is, if the source who spoke with the Australian publication Motoring is to be believed.</p>
+                    </h2>
+                    <p>
+                      <%=datanews.News[2].title %>
+                        <%=datanews.News[13].title %>
+                    </p>
+                  </div>
+                </a>
               </div>
-            </div>
+              <%} %>
           </div>
           <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -128,40 +172,61 @@
       <div class="col-lg-3 flex-column align-items-end">
         <div class="menu-carousel d-flex flex-column position-relative justify-content-center active-highlight-selected" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="0">
-          <img src="images/xe-lon-1.jpg" class="img-fluid" alt="">
+          <img src="<%=datanews.News[0].img %>" class="img-fluid" alt="">
           <div class="menu-carousel-content position-absolute">
-            <h5>Genesis Essentia Might Arrive In 2021, Company Boss Hints</h5>
+            <h5>
+              <%=datanews.News[0].title %>
+            </h5>
 
             <i class="fa fa-calendar"></i>
-            <span>21 - 04 - 2019</span>
+            <span>
+              <%=datanews.News[0].date_publish %>
+            </span>
             <i class="fa fa-comments"></i>
-            <span> 50</span>
+            <span>
+              <%=datanews.News[0].views %>
+            </span>
           </div>
 
         </div>
         <div class="menu-carousel d-flex flex-column position-relative mt-4 justify-content-center" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="1">
-          <img src="images/xe-lon-2.jpg" class="img-fluid" alt="">
+          <img src="<%=datanews.News[13].img %>" class="img-fluid" alt="">
+
           <div class="menu-carousel-content position-absolute">
-            <h5>Bugatti La Voiture Noire Debuts: Most Expensive New Car Ever</h5>
+            <h5>
+              <%=datanews.News[13].title %>
+            </h5>
 
             <i class="fa fa-calendar"></i>
-            <span>21 - 04 - 2019</span>
+            <span>
+              <%=datanews.News[13].date_publish %>
+            </span>
             <i class="fa fa-comments"></i>
-            <span> 50</span>
+            <span>
+              <%=datanews.News[13].views %>
+            </span>
           </div>
+
+
 
         </div>
         <div class="menu-carousel d-flex flex-column position-relative mt-3 justify-content-center" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="2">
-          <img src="images/xe-lon-3.jpg" class="img-fluid" alt="">
+          <img src="<%=datanews.News[2].img %>" class="img-fluid" alt="">
           <div class="menu-carousel-content position-absolute">
-            <h5>Bugatti La Voiture Noire Debuts: Most Expensive New Car Ever</h5>
+            <h5>
+              <%=datanews.News[2].title %>
+            </h5>
 
             <i class="fa fa-calendar"></i>
-            <span>21 - 04 - 2019</span>
+            <span>
+              <%=datanews.News[2].date_publish %>
+            </span>
             <i class="fa fa-comments"></i>
-            <span> 50</span>
+            <span>
+              <%=datanews.News[2].views %>
+            </span>
           </div>
 
         </div>

@@ -31,6 +31,9 @@ body
 {
     font-size: 14px;
 }
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
 #menu .nav-bar .navbar .navbar-nav li
 {
     margin-right: 120px;
