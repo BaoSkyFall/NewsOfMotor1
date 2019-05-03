@@ -394,6 +394,10 @@ bottom: 0;
 {
     background-color: #343A40;
 }
+#news-third .row #category-4 .col-lg-12 .blog_main ul li a.active
+{
+    background-color: #17A2B8;
+}
 #footer
 {
     height: 300px;

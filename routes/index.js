@@ -5,8 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Motor1 News Homepage' });
 });
-router.get('/news', function(req, res, next) {
-  res.render('news', { title: 'News' });
+router.get('/news/:title', function(req, res, next) {
+  res.render('news',{title:req.params.title});
 
 });
 router.get('/admin/dashboard', function(req, res, next) {

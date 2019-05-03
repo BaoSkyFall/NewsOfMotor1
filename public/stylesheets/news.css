@@ -49,7 +49,7 @@ body
     width: 64px;
     border-radius: 50%;
 }
-#news .news-content .content-news img
+#news .news-content img
 {
     max-width: 100%;
     height: auto;

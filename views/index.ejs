@@ -8,6 +8,7 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 
   <link rel='stylesheet' href='/stylesheets/index.css' />
+  <link rel="stylesheet" href="/stylesheets/animate.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,6 +37,7 @@
 
 
   </section>
+
   <header id="menu" class="container-fluid">
     <div class="logo d-flex justify-content-center">
       <img src="./images/logo2.png" class="img-fluid" alt="">
@@ -279,7 +281,7 @@
             </div>
           </div>
         </div>
-        <!-- Hanh Trinh Khoi Dau -->
+        <!-- Start Humor -->
         <section id="news-third" class="container mt-4 ">
 
           <div class="row mr-0">
@@ -288,357 +290,162 @@
                 <div class="blog_main d-flex justify-content-start">
                   <div class="blog_main_heading_div">
                     <div class="blog_heading_div">
-                      <h3 class="bg-primary text-light">CLASSICS</h3>
+                      <h3 class="bg-primary text-light">HUMOR</h3>
                     </div>
                   </div>
                   <ul class="nav nav-pills mb-3 d-flex justify-content-center w-100" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                      <a class="nav-link active" id="pills-all-humor-tab" data-toggle="pill" href="#pills-humor-all" role="tab" aria-controls="pills-humor"
                         aria-selected="true">All</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Classics</a>
+                      <a class="nav-link" id="pills-funny-tab" data-toggle="pill" href="#pills-funny" role="tab" aria-controls="pills-funny" aria-selected="false">Funny</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Supercars</a>
+                      <a class="nav-link" id="pills-weird-tab" data-toggle="pill" href="#pills-weird" role="tab" aria-controls="pills-weird" aria-selected="false">Weird</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">Military/ Police</a>
-                    </li>
+
                   </ul>
                 </div>
 
                 <div class="tab-content" id="pills-tabContent">
                   <!-- Category-1 -->
-                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show active" id="pills-humor-all" role="tabpanel" aria-labelledby="pills-all-humor-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 6 && baiviet.id <13){ %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
+                              </div>
+                            </div>
+                            <% if(baiviet.kind == "Funny"){ %>
+                              <button class="btn btn-success">
+                                <%=baiviet.kind %>
+                              </button>
+                              <% }%>
+                                <% if(baiviet.kind == "Weird"){ %>
+                                  <button class="btn btn-info">
+                                    <%=baiviet.kind %>
+                                  </button>
+                                  <% }%>
+
+                                    <div class="category-title">
+                                      <h6>
+                                        <%=baiviet.title %>
+                                      </h6>
+                                      <i class="fa fa-calendar"></i>
+                                      <span>
+                                        <%=baiviet.date_publish %>
+                                      </span>
+                                      <i class="fa fa-comments"></i>
+                                      <span>
+                                        <%=baiviet.views %>
+                                      </span>
+                                    </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
                           </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
-
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <!-- Category-2 -->
-                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show " id="pills-funny" role="tabpanel" aria-labelledby="pills-funny-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 6 && baiviet.id <13){ %>
+                          <% if(baiviet.kind == "Funny"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-success">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
 
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
+
                     </div>
                   </div>
                   <!-- Category-3 -->
-                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade" id="pills-weird" role="tabpanel" aria-labelledby="pills-weird-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 13 && baiviet.id > 6){ %>
+                          <% if(baiviet.kind == "Weird"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-info">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
+
+
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
+                  <button class="btn btn-primary w-100">Load More...</button>
+
                 </div>
 
-                <button class="btn btn-primary w-100">Load More...</button>
               </div>
             </div>
 
@@ -647,7 +454,8 @@
 
           </div>
         </section>
-        <!-- //Show Category-2 -->
+        <!-- End Humor -->
+        <!-- Start Supercars -->
         <section id="news-third" class="container mt-4 ">
 
           <div class="row mr-0">
@@ -661,359 +469,164 @@
                   </div>
                   <ul class="nav nav-pills mb-3 d-flex justify-content-center w-100" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="pills-all-supercars-tab" data-toggle="pill" href="#pills-supercars" role="tab" aria-controls="pills-supercars"
+                      <a class="nav-link active" id="pills-all-supercars-tab" data-toggle="pill" href="#pills-supercars-all" role="tab" aria-controls="pills-supercars"
                         aria-selected="true">All</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Classics</a>
+                      <a class="nav-link" id="pills-ontop-tab" data-toggle="pill" href="#pills-ontop" role="tab" aria-controls="pills-ontop" aria-selected="false">On top</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Supercars</a>
+                      <a class="nav-link" id="pills-celebrity-tab" data-toggle="pill" href="#pills-celebrity" role="tab" aria-controls="pills-celebrity"
+                        aria-selected="false">Celebrity</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">Military/ Police</a>
-                    </li>
+
                   </ul>
                 </div>
 
                 <div class="tab-content" id="pills-tabContent">
                   <!-- Category-1 -->
-                  <div class="tab-pane fade show active" id="pills-supercars" role="tabpanel" aria-labelledby="pills-all-supercars-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show active" id="pills-supercars-all" role="tabpanel" aria-labelledby="pills-all-supercars-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 7){ %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
+                              </div>
+                            </div>
+                            <% if(baiviet.kind == "On top"){ %>
+                              <button class="btn btn-danger">
+                                <%=baiviet.kind %>
+                              </button>
+                              <% }%>
+                                <% if(baiviet.kind == "Celebrity"){ %>
+                                  <button class="btn btn-primary">
+                                    <%=baiviet.kind %>
+                                  </button>
+                                  <% }%>
+
+                                    <div class="category-title">
+                                      <h6>
+                                        <%=baiviet.title %>
+                                      </h6>
+                                      <i class="fa fa-calendar"></i>
+                                      <span>
+                                        <%=baiviet.date_publish %>
+                                      </span>
+                                      <i class="fa fa-comments"></i>
+                                      <span>
+                                        <%=baiviet.views %>
+                                      </span>
+                                    </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
                           </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
-
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <!-- Category-2 -->
-                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show " id="pills-ontop" role="tabpanel" aria-labelledby="pills-ontop-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 7){ %>
+                          <% if(baiviet.kind == "On top"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-danger">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
 
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
+
                     </div>
                   </div>
                   <!-- Category-3 -->
-                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade" id="pills-celebrity" role="tabpanel" aria-labelledby="pills-celebrity-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 7){ %>
+                          <% if(baiviet.kind == "Celebrity"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-primary">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
+
+
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
+                  <button class="btn btn-danger w-100">Load More...</button>
+
                 </div>
-
-                <button class="btn btn-danger w-100">Load More...</button>
               </div>
+
             </div>
-
-
           </div>
         </section>
-        <!-- //Show Category-3 -->
+        <!-- End Supercars -->
+        <!-- Start Motor -->
         <section id="news-third" class="container mt-4 ">
 
           <div class="row mr-0">
@@ -1022,357 +635,165 @@
                 <div class="blog_main d-flex justify-content-start">
                   <div class="blog_main_heading_div">
                     <div class="blog_heading_div">
-                      <h3 class="bg-dark text-light">MILITARY / POLICE</h3>
+                      <h3 class="bg-dark text-light">MOTOR</h3>
                     </div>
                   </div>
                   <ul class="nav nav-pills mb-3 d-flex justify-content-center w-100" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="pills-all-supercars-tab" data-toggle="pill" href="#pills-supercars" role="tab" aria-controls="pills-supercars"
+                      <a class="nav-link active" id="pills-all-motor-tab" data-toggle="pill" href="#pills-motor-all" role="tab" aria-controls="pills-motor"
                         aria-selected="true">All</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Classics</a>
+                      <a class="nav-link" id="pills-motorcycle-tab" data-toggle="pill" href="#pills-motorcycle" role="tab" aria-controls="pills-motorcycle"
+                        aria-selected="false">Motorcycle</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Supercars</a>
+                      <a class="nav-link" id="pills-mortorhomes-tab" data-toggle="pill" href="#pills-mortorhomes" role="tab" aria-controls="pills-mortorhomes"
+                        aria-selected="false">Motorhomes</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">Military/ Police</a>
-                    </li>
+
                   </ul>
                 </div>
 
                 <div class="tab-content" id="pills-tabContent">
                   <!-- Category-1 -->
-                  <div class="tab-pane fade show active" id="pills-supercars" role="tabpanel" aria-labelledby="pills-all-supercars-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show active" id="pills-motor-all" role="tabpanel" aria-labelledby="pills-all-motor-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 12 && baiviet.id <19){ %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
+                              </div>
+                            </div>
+                            <% if(baiviet.kind == "Motorcycles"){ %>
+                              <button class="btn btn-secondary text-light font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
+                              <% }%>
+                                <% if(baiviet.kind == "Motorhomes"){ %>
+                                  <button class="btn btn-warning font-weight-bold">
+                                    <%=baiviet.kind %>
+                                  </button>
+                                  <% }%>
+
+                                    <div class="category-title">
+                                      <h6>
+                                        <%=baiviet.title %>
+                                      </h6>
+                                      <i class="fa fa-calendar"></i>
+                                      <span>
+                                        <%=baiviet.date_publish %>
+                                      </span>
+                                      <i class="fa fa-comments"></i>
+                                      <span>
+                                        <%=baiviet.views %>
+                                      </span>
+                                    </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
                           </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
-
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <!-- Category-2 -->
-                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade show " id="pills-motorcycle" role="tabpanel" aria-labelledby="pills-motorcycle-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 12 && baiviet.id <19){ %>
+                          <% if(baiviet.kind == "Motorcycles"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-secondary font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
 
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
+
                     </div>
                   </div>
                   <!-- Category-3 -->
-                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-1.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
+                  <div class="tab-pane fade" id="pills-mortorhomes" role="tabpanel" aria-labelledby="pills-mortorhomes-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 19 && baiviet.id > 12){ %>
+                          <% if(baiviet.kind == "Motorhomes"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-warning font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-2.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-3.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
+
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
+
+
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
 
                     </div>
-                    <div class="row">
-                      <div class="col-lg-4 category-1 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-4.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary">Classics</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
 
 
-                      </div>
-                      <div class="col-lg-4 category-2 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-5.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-danger">Supercars</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 category-3 position-relative">
-                        <div class="hovereffect">
-                          <img src="/images/xe-lon-6.jpg" class="img-fluid" alt="">
-                          <div class="overlay h-50">
-                            <a class="info" href="/news">Read More</a>
-                          </div>
-                        </div>
-                        <button class="btn btn-dark">Military/ Police</button>
-                        <div class="category-title">
-                          <h6>Next-Gen Toyota 86, Subaru BRZ May Use Toyota Platform</h6>
-                          <i class="fa fa-calendar"></i>
-                          <span>21 - 04 - 2019</span>
-                          <i class="fa fa-comments"></i>
-                          <span> 50</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
+                  <button class="btn btn-dark w-100">Load More...</button>
+
                 </div>
 
-                <button class="btn btn-dark w-100">Load More...</button>
+
               </div>
             </div>
 
@@ -1380,7 +801,183 @@
 
           </div>
         </section>
-        <!-- Hanh Trinh Ket THuc -->
+        <!-- End Motor -->
+        <!-- Start Modern -->
+        <section id="news-third" class="container mt-4 ">
+
+          <div class="row mr-0">
+            <div id="category-4">
+              <div class="col-lg-12">
+                <div class="blog_main d-flex justify-content-start">
+                  <div class="blog_main_heading_div">
+                    <div class="blog_heading_div">
+                      <h3 class="bg-info text-light">Mordern</h3>
+                    </div>
+                  </div>
+                  <ul class="nav nav-pills mb-3 d-flex justify-content-center w-100" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-all-modern-tab" data-toggle="pill" href="#pills-modern-all" role="tab" aria-controls="pills-modern"
+                        aria-selected="true">All</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-technology-tab" data-toggle="pill" href="#pills-technology" role="tab" aria-controls="pills-technology"
+                        aria-selected="false">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-special-tab" data-toggle="pill" href="#pills-special" role="tab" aria-controls="pills-special"
+                        aria-selected="false">Special</a>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="tab-content" id="pills-tabContent">
+                  <!-- Category-1 -->
+                  <div class="tab-pane fade show active" id="pills-modern-all" role="tabpanel" aria-labelledby="pills-all-modern-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 18 && baiviet.id <25){ %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
+                              </div>
+                            </div>
+                            <% if(baiviet.kind == "Technology"){ %>
+                              <button class="btn btn-primary text-light font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
+                              <% }%>
+                                <% if(baiviet.kind == "Special"){ %>
+                                  <button class="btn btn-success font-weight-bold">
+                                    <%=baiviet.kind %>
+                                  </button>
+                                  <% }%>
+
+                                    <div class="category-title">
+                                      <h6>
+                                        <%=baiviet.title %>
+                                      </h6>
+                                      <i class="fa fa-calendar"></i>
+                                      <span>
+                                        <%=baiviet.date_publish %>
+                                      </span>
+                                      <i class="fa fa-comments"></i>
+                                      <span>
+                                        <%=baiviet.views %>
+                                      </span>
+                                    </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
+
+                    </div>
+
+                  </div>
+                  <!-- Category-2 -->
+                  <div class="tab-pane fade show " id="pills-technology" role="tabpanel" aria-labelledby="pills-technology-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id > 18 && baiviet.id <25){ %>
+                          <% if(baiviet.kind == "Technology"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-primary font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
+
+
+
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
+
+
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
+
+                    </div>
+                  </div>
+                  <!-- Category-3 -->
+                  <div class="tab-pane fade" id="pills-special" role="tabpanel" aria-labelledby="pills-special-tab">
+                    <div class="row" style="min-height: 550px">
+                      <% datanews.News.forEach(function(baiviet){%>
+                        <% if(baiviet.id < 25 && baiviet.id > 18){ %>
+                          <% if(baiviet.kind == "Special"){ %>
+                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                              <div class="hovereffect">
+                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                                <div class="overlay h-50">
+                                  <a class="info" href="/news">Read More</a>
+                                </div>
+                              </div>
+
+                              <button class="btn btn-success font-weight-bold">
+                                <%=baiviet.kind %>
+                              </button>
+
+
+
+                              <div class="category-title">
+                                <h6>
+                                  <%=baiviet.title %>
+                                </h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>
+                                  <%=baiviet.date_publish %>
+                                </span>
+                                <i class="fa fa-comments"></i>
+                                <span>
+                                  <%=baiviet.views %>
+                                </span>
+                              </div>
+
+
+                            </div>
+                            <% }%>
+                              <% }%>
+                                <% }) %>
+
+
+                    </div>
+
+
+                  </div>
+                  <button class="btn btn-info w-100">Load More...</button>
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </section>
+        <!-- End Modern -->
       </div>
       <!-- Side-bar -->
       <div id="side-bar" class="col-lg-3">
