@@ -1,0 +1,446 @@
+{
+    "News": [
+        {
+            "id": "1",
+            "title": "Mercedes-AMG One Delay Caused By Stricter Emissions Laws",
+            "category": "Supercars",
+            "kind":"On top",
+            "tag": [
+                "Supercars",
+                "On-top"
+            ],
+            "content": "<h2>AMG is making &quot;great progress&quot; fixing the problems to make the hypercar WLTP-compliant.</h2><p>It&rsquo;s safe to say the switch from the New European Driving Cycle to the more realistic World Harmonized Light Vehicle Test Procedure in Europe has generated quite a few problems for automakers. Some had to dial down the output of the engines to make their cars WLTP-compliant while others had no other way but to discontinue models. Some relevant examples include Jaguar&rsquo;s decision to&nbsp;axe the XJR575 in Europe, while the Volkswagen Group had to remove 10 horsepower from the Golf R and the SEAT Leon Cupra.</p><p>News about Mercedes-AMG&rsquo;s decision to delay the&nbsp;One hypercar&nbsp;first emerged in October 2018, and now the man in charge in Affalterbach has confirmed in an interview with&nbsp;Autocar&nbsp;the F1-engined machine has indeed been pushed back. The electrified&nbsp;coupe&nbsp;was introduced back in September 2017 at the Frankfurt Motor Show, but AMG has yet to deliver a production car nearly two years after the official reveal.</p><p><img src='https://cdn.motor1.com/images/mgl/pog2g/s4/mercedes-amg-one.jpg' /></p><p>The root of the problem is indeed the switch to the stricter WLTP cycle, which is forcing&nbsp;Mercedes&nbsp;to install a gasoline particulate filter for the 1.6-liter V6 engine of F1 origins. AMG boss Tobias Moers has now revealed they&rsquo;ve been making &ldquo;great progress&rdquo; in implementing a fix to make the One WLTP-compliant without dropping combined output below the magical 1,000-horsepower mark.</p><p>He went on to mention AMG is &ldquo;figuring out when the first customers will get their cars in the next few weeks,&rdquo; so early adopters probably won&rsquo;t have to wait much longer to take delivery of their prized possessions. As you may recall, only 275 cars are being built, and some of them might become a&nbsp;Lewis Hamilton special edition, unless production will be extended for this purpose.</p><p>The One has all the ingredients to become the next record holder for the fastest production car at the&nbsp;N&uuml;rburgring, with Tobias Moers&nbsp;hinting&nbsp;an attempt to dethrone the Lamborghini Aventador Superveloce Jota (6:44.97) is planned. We&rsquo;ll see how this plays out, but with a high-revving F1 engine taken from a championship-winning car working combined with four electric motors, it might just happen.</p>",
+            "author": "Quoc Anh",
+            "views": "200",
+            "link-source": "https://www.motor1.com/news/347368/amg-one-wltp-stricter-emissions/",
+            "img":"https://cdn.motor1.com/images/mgl/pog2g/s1/mercedes-amg-one.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+        {
+            "id": "2",
+            "title": "Lamborghini Aventador Successor Could Be 1,100-HP Plug-In Hybrid",
+            "category": "Supercars",
+            "kind":"On top",
+            "tag": [
+                "Supercars",
+                "On-top"
+            ],
+            "content": "<h2>It would keep Lambo&#39;s naturally aspirated V12 and add three electric motors.</h2><p>The year is 2019, and the major supercar players &ndash; namely Porsche, Ferrari, and McLaren &ndash; have gone hybrid. Lamborghini is the lone holdout, clinging to its epic V10 and V12 engines and doing a damn good job of not only keeping relevant, but staying extremely competitive in a world of increasing electrification. We know electric power is coming to Sant&rsquo;Agata Bolognese, however; It&rsquo;s just a question of when, and how. We&rsquo;ve heard plenty of rumors on what&rsquo;s to come &ndash; specifically with regards to the Aventador&rsquo;s replacement. But now, Car magazine claims to have the scoop on both of these questions.</p><p><img src='https://cdn.motor1.com/images/mgl/9xvbG/s4/lamborghini-terzo-millennio.jpg' /></p><p>Specifically, the report says Lamborghini will seek to deliver a hybrid combining electric power for the front and the brand&rsquo;s iconic naturally aspirated V12 at the back. That falls in line with rumors we heard previously, but&nbsp;<em>Car</em>&nbsp;claims to have spoken directly with Lamborghini bosses to learn that a third electric motor will also work its magic for the rear. It will join a dual-clutch transmission and a modified version of the V12, with batteries running down the middle of the car to keep weight and balance in check. And that&rsquo;s good, because this new Lambo shouldn&rsquo;t be shy when it comes to horsepower.</p><p>How much power are we talking about? The report mentioned an &ldquo;estimated&rdquo; figure of 400 hp from electric power alone. Even if the current 6.5-liter V12 carries over from the Aventador unchanged, that would be a combined figure of over 1,100 hp turning all four wheels. It will be a plug-in hybrid allowing for limited all-electric operation, and it will all reside in a completely new platform with a body inspired by the Terzo Millennio Concept (pictured above) from 2017.</p><p>Previous rumors had this mega-hyper-hybrid Lambo breaking cover in 2020, but Car&rsquo;s report says the timeframe has moved back to 2022. If the news about this Aventador successor is accurate, it should most decidedly be worth the wait.</p>",
+            "link-source": "https://www.motor1.com/news/344829/lamborghini-aventador-successor-1100-hp/",
+           
+            "author": "Quoc Bao",
+            "views": "240",
+            "img":"https://cdn.motor1.com/images/mgl/9xvbG/s4/lamborghini-terzo-millennio.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+        {
+            "id": "3",
+            "category": "Supercars",
+            "kind":"On top",
+            "title": "Confirmed: C7 Corvette ZR1 Didn't Beat 7-Minute 'Ring Lap Time",
+            "tag": [
+                "Supercars",
+                "On-top"
+            ],
+            "content": "<h2>... but it can do better.</h2><p>As of yet, we haven&rsquo;t heard any official Nurburgring lap times for the entire Chevrolet Corvette C7 family &ndash; we&rsquo;ve only seen a number of cars lapping the legendary German track and have read different speculations about their performance. Today, we finally have (some kind of) official confirmation that the range-topping C7 Corvette ZR1 has registered a time of 7:04 minutes.</p<p>It comes from former Corvette test driver and ride/handling engineer Jim Mero who is now running a new company focused on calibrations for the Magnetic Ride Control on 2009-2013 C6 Corvettes. His new enterprise, Jim Mero Vehicle Dynamics LLC, has a Facebook page where Mero uploads content, including photos of his laps around the &lsquo;Ring with different &lsquo;Vettes over the years.</p><p>&nbsp;</p><p><img src='https://cdn.motor1.com/images/mgl/9b9Vm/s4/2019-chevrolet-corvette-zr1.jpg' /></p><p>One of the photos shows a red C7 Corvette ZR1 with a text confirming a lap time of 7:04 minutes and it looks a lot like the red ZR1 we saw around the track in May last year. Apparently, according to Mero, the car can perform even better but the driver was &ldquo;forced to start the lap on cold tires.&rdquo;</p><p>Some of Mero&rsquo;s other Nurburgring runs include a 7:10-minute time onboard a C7 Corvette Z06 and 7:19 minutes behind the wheel of a previous-generation ZR1. Here&rsquo;s the full list of his attempts at the track with different Corvette models:</p><ul><li>7:33 &ndash; C7 Corvette Stingray Z51 (S)</li><li>7:27 &ndash; C7 Corvette Grand Sport</li><li>7:26 &ndash; C6 2009 Corvette ZR1</li><li>7:22 &ndash; C6 2012 Corvette Z06</li><li>7:19 &ndash; C6 2012 Corvette ZR1</li><li>7:10 &ndash; C7 Corvette Z06</li><li>6:57 &ndash; C7 Corvette ZR1 (S)</li></ul><p>We&rsquo;ll know even more in a few weeks when Mero will host a seminar at the NCM Bash and will reveal more details about his ZR1 run around the famous circuit.</p>",
+            "link-source": "https://www.motor1.com/news/343940/corvette-zr1-nurburgring-times/",
+            "author": "Hai Binh",
+            "views": "350",
+            "img":"https://cdn.motor1.com/images/mgl/9b9Vm/s1/2019-chevrolet-corvette-zr1.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		        {
+            "id": "4",
+            "category": "Supercars",
+            "kind":"Celebrity",
+            "title": "John Cena Joins Fast & Furious 9 Cast",
+            "tag": [
+                "Supercars",
+                "Celebrity"
+            ],
+            "content": "<h2>Yes, it&#39;s happening!</h2><p>Next year&rsquo;s&nbsp;Fast &amp; Furious 9&nbsp;movie will feature a new star actor in the lineup.&nbsp;Vin Diesel&nbsp;revealed with an emotional video on his Instagram channel that&nbsp;John Cena&nbsp;will be joining the franchise. Basically, this means that, with Dwayne &lsquo;The Rock&rsquo; Johnson likely not part of the cast for the ninth installment of the series, another WWE-star will take his place.</p><p>&quot;Guys, as you know, I&#39;m always thinking Fast - thinking about the responsibility of making something iconic and deserving of your loyalty,&quot; Diesel explains in the short clip. &quot;I feel like Pablo, [from] up there, sends me someone. Another soldier for the fight for truth. And today, someone came by Toretto Gym that speaks to what Pablo would&#39;ve brought me.&quot;</p><img src='https://cdn.motor1.com/images/mgl/qO0Jv/s4/john-cenas-ferrari-360-spider.jpg'><p>Diesel talks about Paul &#39;Pablo&#39; Walker before moving the camera to show Cena standing next to him. &ldquo;All love. Always,&quot; Diesel says before the end of the video. At this point, we can&rsquo;t say whether Cena will take the &ldquo;good&rdquo; or the &ldquo;bad&rdquo; side in the movie, but our guess is that he&rsquo;ll join Toretto&rsquo;s crew.</p><p>The Fast &amp; Furious 9 will be out on May 22, 2020, and will mark the return of director Justin Lin who directed the Tokyo Drift, Fast &amp; Furious, Fast Five, and Fast &amp; Furious 6 movies. He will be in charge of directing the ninth and final tenth movies with the latter scheduled to air in April 2021.</p><p>As for &lsquo;The Rock,&rsquo; he is moving to the Hobbs &amp; Shaw spinoff also starring Jason Statham. The first trailers already hinted the movie will have all the ingredients for a proper summertime action blockbuster. The film will premiere in the United States on August 2 this year.</p>",
+			"link-source": "https://www.motor1.com/news/346964/john-cena-joining-fast-furious/",
+            "author": "Hai Binh",
+            "views": "350",
+            "img":"https://cdn.motor1.com/images/mgl/qO0Jv/s4/john-cenas-ferrari-360-spider.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		 {
+            "id": "5",
+            "category": "Supercars",
+            "kind":"Celebrity",
+            "title": "Avengers: Endgame Premiere Sees Tony Stark Arrive In Audi E-Tron GT",
+            "tag": [
+                "Supercars",
+                "Celebrity"
+            ],
+            "content": "<h2>A very Iron Man-esque ride, indeed.</h2><p>Before fans pile into theaters for the latest and possibly greatest Marvel flick, Avengers: Endgame, the original Avengers cast teams up one last time (we think... no spoilers) for the long-awaited movie&#39;s premiere in Los Angeles. And one of the saga&#39;s most recognizable stars, Robert Downey Jr., rolled up to the theater in a concept car appropriate for Iron Man himself: the new Audi E-Tron GT.</p><p>This isn&#39;t the first time we&#39;ve seen Downey with of the E-Tron GT. Soon after the concept debuted, Downey was one of the first people outside of Audi to drive it (of course, it was all captured on video), and instantly geeked out over the E-Tron GT&#39;s sharp design. But he&#39;ll have even more time with the concept in Avengers: Endgame, as Tony Stark swaps out his iconic R8 for the electric sedan instead.</p><img src='https://cdn.motor1.com/images/mgl/PKWz4/s4/robert-downey-jr-audi-e-tron-gt.jpg'><p>The car itself is far from science fiction. Audi unveiled the E-Tron GT last year at the&nbsp;Los Angeles Auto Show&nbsp;with a 90 kilowatt-hour battery pack and 582 horsepower (434 kilowatts) on tap. With fast charging (zero to 80 percent in 20 minutes) and wireless charging capabilities (at 11 kilowatts), Audi gives the E-Tron GT an estimated range of 250 miles (400 kilometers) on the WLTP test cycle.</p><p>It&#39;s not just about range, though. With dual-motor (PMSM) all-wheel drive with torque vectoring, the E-Tron GT can hit 62 mph (100 kilometers per hour) in 3.5 seconds, 124 mph (200 kmh) in just over 12 seconds, and continue on to a top speed of 149 mph (240 kmh)</p><p>That said, the E-Tron GT is the perfect ride for Tony Stark. It has all the tech you&#39;d expect, and the performance to match. We expect plenty of other Audi vehicles in Avengers: Endgame, too; the company just released an ad with Tony Stark teaching Captain Marvel about modern tech, and showing off the new E-Tron crossover in the process.</p>",
+			"link-source": "https://www.motor1.com/news/346561/avengers-endgame-tony-stark-audi/",
+            "author": "Hai Binh",
+            "views": "350",
+            "img":"https://cdn.motor1.com/images/mgl/PKWz4/s1/robert-downey-jr-audi-e-tron-gt.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "6",
+            "category": "Supercars",
+            "kind":"Celebrity",
+            "title": "Chevy’s Real People, Not Actors Check Out Blazer And Competitors",
+            "tag": [
+                "Supercars",
+                "Celebrity"
+            ],
+            "content": "<h2>What do a guitar or mid-century modern chair have to do with a Blazer?</h2><p>Chevrolet&#39;s &quot;Real People. Not Actors.&quot; series of commercials already draw ire for having the participants saying things so positive about the Bowtie&#39;s products that the statements strain belief that there&#39;s anything authentic happening on the screen. If the current ads get on your nerves, then the new one is sure to infuriate you.</p><p>The 30-second spot (above) compares a red Chevrolet Blazer against a silver Jeep Grand Cherokee and gray Ford Edge. There are assorted pairs of objects like a folding chair and mid-century modern one; a crying clown painting and abstract art; and an electric guitar and an accordion. Then the host asks which items the real people would put in the Blazer and which would go into the Jeep or Ford.</p<p>As you&#39;d expect from a commercial, the &quot;real&quot; people pick hipper, generally more expensive items to go into the Blazer. The Ford and Jeep get what&#39;s left. The ad is trying to draw the connection for viewers that the Bowtie&#39;s SUV is the cool, stylish choice in the segment. The spot comes off as heavy-handed, though. Of course, people are going to be attracted to the bright red vehicle that&#39;s parked in front of a gray or silver competitor.</p><p>Worst is all, the Blazer is an interesting entry in the crossover segment and has some compelling strengths. It deserves a better ad.</p><p>Chevy&#39;s &quot;real people&quot; ads are old enough now that it&#39;s also getting hard to believe that the participants don&#39;t know what&#39;s going on. Even if there&#39;s no coaching beforehand, they are likely familiar with the spots and know to gush over the Bowtie&#39;s product.&nbsp;</p><p><iframe align='middle' frameborder='0' height='315' scrolling='no' src='https://www.youtube.com/embed/h157td3dMzk' width='560'></iframe></p><p>A second new Blazer ad (abvoe) is a little better. Chevy simple parks the SUV in an area are walking by and records what they say. The company obviously cherry picks the most positive statements, but at least these folks come off as somewhat real people.</p><p>&nbsp;</p>",
+			"link-source": "https://www.motor1.com/news/347612/chevy-blazer-real-people-ad/",
+            "author": "Hai Binh",
+            "views": "350",
+            "img":"https://cdn.motor1.com/images/mgl/6JoQl/s6/chevy-blazer-ad.jpg",
+            "date_publish": "02 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "7",
+            "category": "Humor",
+            "kind":"Funny",
+            "title": "Awesome Ford Mustang Snow Sculpture Gets Pretend Tow Notice",
+            "tag": [
+                "Humor",
+                "Funny",
+                "Car"
+            ],
+            "content": "<h2>This is one Mustang that absolutely loves winter.</h2><p>Winter has been rough in parts of the United States this year. It’s about to get tougher for folks in the Plains, as a brewing blizzard is poised to dump two feet of snow with hurricane force winds over parts of the Dakotas and Nebraska. These folks don’t panic over such things, however. Instead, they build cool life-size replicas of classic cars out of snow, like the surprisingly accurate first-generation Ford Mustang  featured above. The photo comes courtesy of the Nebraska State Patrol on Twitter, along with this short-but-sweet video of a “traffic stop” performed on the classic ‘Stang.</p><p>According to the Omaha World-Hearld, the car is the handiwork of one Jason Blundell and his kids in Chadron, Nebraska. This small town is in the Nebraska panhandle just south of the South Dakota border, and last weekend a late-winter storm dropped several inches of snow through the area. 43-year-old Blundell – whom we very much admire for being a proper adult-kid – corralled his 15-year-old son Spenser and 17-year-old daughter Shelby, and with the help of a skid-steer loader and several tools they created this realistic-looking 1967 Ford Mustang from a big pile of snow. Folks, that's what you call parenting done right.</p><img src='https://cdn.motor1.com/images/mgl/RBR8x/s4/snow-mustang.jpg' alt='Awesome Ford Mustang Snow Sculpture Gets Pretend Tow Notice'><p>How did the Blundells do such a good job building this Snow Pony? If you look closely at the photo you might notice the backside of a classic Mustang in the garage. That’s a <em>real</em>1967 Mustang, and it served as the literal measuring stick for which the snow version was built. It took five hours all total, but once the project was done, a local Nebraska State Patrol officer couldn’t resist nabbing video of the illegally parked Mustang. He even issued a tow notice – all in jest of course.</p><p>It’s presently above freezing in Chadron, so in all likelihood the Snow ‘Stang is no longer recognizable as anything more than a chunk of snow. However, a blizzard warning is in effect through Thursday with over a foot of snow expected in the area. In other words, the Blundells should have all kinds of raw material to build a veritable fleet of new cars. Perhaps a snow police car is in order this time?</p>",
+			"link-source": "https://www.motor1.com/news/313233/ford-mustang-snow-sculpture-tow-notice/",
+            "author": "Quoc Bao",
+            "views": "456",
+            "img":"https://cdn.motor1.com/images/mgl/RBR8x/s4/snow-mustang.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "8",
+            "category": "Humor",
+            "kind":"Funny",
+            "title": "Ford And Chevy Dealers Duke It Out In Billboard Battle",
+            "tag": [
+                "Humor",
+                "Funny",
+                "Car",
+                "Design"
+            ],
+            "content": "<h2>We like where this is going.</h2><p>Here’s a bit of Ford-versus-Chevy fun to take you into the weekend. A couple&nbsp;of days ago, <em>Men’s Humor</em> on Facebook posted a curious photo showing a pair of large roadside billboards. &nbsp;At the top of the post was a simple caption: “Looking forward to watching this billboard battle escalate.”&nbsp; We’ll let the post speak for itself.</p><p>We’re guessing the Ford advertisement went up first, as it’s a generic poke at all things Chevrolet. The Chevy ad, however, is quite specific and very well done indeed. We’re not taking sides here, but come on – let’s give a shout-out to the creative mind at the Chevy dealer that came up with this idea. We did some in-depth research (okay, we did a 30-second Google search) and found that Marchant Chevrolet and Ravenel Ford are in fact neighbors. Both are located in Ravenel, South Carolina and are only separated by a couple of miles.</p><img src='https://cdn.motor1.com/images/mgl/V1KbR/s4/ford-versus-chevy-billboard-war.jpg' alt='Ford And Chevy Dealers Duke It Out In Billboard Battle'><p>For the record, billboard advertising isn’t cheap. The large wrap alone can cost hundreds of dollars, and rental for the space can easily run into the thousands. Assuming the Ford billboard went up first, someone at the Chevy dealer was compelled enough to spend <em>serious</em> dinero for an admittedly brilliant public comeback. We salute that kind of initiative, and hey, that investment is going far beyond the people commuting along Savannah Highway. This post from <em>Men’s Humor</em> presently has 62,000 shares and 2,700-plus comments. It’s safe to say this little billboard war is officially viral.</p><p>The million-dollar question now is, where do we go from here? Clearly the next move belongs to Ravenel Ford – perhaps a quip on the Silverado’s controversial new face is in order? Or maybe it’s time for the closest Dodge dealer to get a witty Ram ad up there? In any case, we will definitely keep an eye out for potential retribution in the weeks to come.</p>",
+			"link-source": "https://www.motor1.com/news/307607/ford-chevy-dealers-billboard-battle/",
+            "author": "Quoc Anh",
+            "views": "156",
+            "img":"https://cdn.motor1.com/images/mgl/V1KbR/s4/ford-versus-chevy-billboard-war.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "9",
+            "category": "Humor",
+            "kind":"Funny",
+            "title": "Police Find Dumb Drunk Driver Hanging From His Truck Window",
+            "tag": [
+                "Humor",
+                "Funny",
+                "Car"
+            ],
+            "content": "<h2>Say hello to the first funny meme of 2019.</h2><p>Friends, it’s 2019. As we all finally make it back to work after a long weekend, some of us might still feel the effects of a romp-em-stomp-em New Years party. However bad your return to daily life is, know that it could be worse. Like, hanging-upside-down-with-foot-stuck-in-steering-wheel worse. That’s exactly what the California Highway Patrol encountered on New Year’s Eve.</p><p>We have to give<em> Autoblog</em> a shout-out for finding this one, and it’s too good not to share. The Facebook post above comes from the central Los Angeles CHP page, and yeah, this dude is in some trouble. We aren’t just talking about being stuck either – he was allegedly quite intoxicated and had, in fact, previously been involved in a hit and run. The Cathedral City Police also shared the incident on its Facebook page and went into a bit more detail.</p><img src='https://cdn.motor1.com/images/mgl/rpq6x/s4/guy-hanging-from-truck.jpg' alt='Police Find Dumb Drunk Driver Hanging From His Truck Window'> <p>That’s all well and good (or, actually, bad) but how did he end up ass-over-teacup outside his pickup? After the aforementioned hit-and-run, he apparently tried to escape by entering private property controlled by an access&nbsp;gate. Whether it’s a place he was familiar with is unknown. What is known is that, as he leaned out the window to reach the keypad, the full effects of that last drink hit without the slightest bit of mercy. As he fell out the window his foot caught the steering wheel, and as you can see, there wasn’t much room for him to move. It’s also quite likely that he didn’t even know which way was up at that point.</p><p>Both police agencies say he was uninjured, though the local fire department did have to cut the steering wheel to get him loose. Suffice it to say, his escape was not successful in the least and now he starts 2019 with charges of driving under the influence and hit-and-run to his name.</p><p>At least he’s responsible for what could be the first hilarious meme-worthy photo of 2019. That’ll teach you to drink and drive.</p>",
+			"link-source": "https://www.motor1.com/news/299490/police-find-drunk-driver-hanging/",
+            "author": "Hai Binh",
+            "views": "239",
+            "img":"https://cdn.motor1.com/images/mgl/rpq6x/s4/guy-hanging-from-truck.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "10",
+            "category": "Humor",
+            "kind":"Weird",
+            "title": "A French Custom Shop Is Building A Hemi-Powered Porsche 911",
+            "tag": [
+                "Humor",
+                "Weird",
+                "Car",
+                "Design"
+            ],
+            "content": "<h2>This wild custom project ditches the rear-mounted flat six in lieu of a Hemi V8 up front.</h2><p>The best thing about being a gearhead is that we do not understand the meaning of the word 'no.' Many of us have a stubborn streak, and when the world tells us that something can't be done – or shouldn't be done – we almost always find a way.</p><img src='https://cdn.motor1.com/images/mgl/mBE3A/s4/hemi-powered-911-project.jpg' alt='A French Custom Shop Is Building A Hemi-Powered Porsche 911'><p>Sometimes, that means turning a car into a hammock. Other times, it could mean shoving three engines into a Lada. This time, it means cutting up a Porsche 911 cabrio and turning it into...well, we're not exactly sure yet.</p><p>MotorAuthority turned us on to this bizarre project from Danton Arts Kustoms, a French tuner and custom car builder. Their goal is to build a front-engined, rear-wheel-drive, Hemi V8-powered Porsche 911. You can see the mockup yourself on Danton Arts Kustoms' Instagram.</p><p>This Porsche 997 started its life as a convertible, from what we can tell. While the suspension and brakes seem to be intact, everything else was stripped from the car, including the original flat six engine. Instead, a Hemi V8 resides where luggage once did. We wonder what the original owner would think of what's happening to their car – we'd love to see their face.</p><p>With no engine hanging behind the rear axle, Danton Arts Kustoms opted to cut off nearly all of the sheetmetal aft of the rear axle. It makes us wonder how one would say 'Won't be needing&nbsp;<em>this&nbsp;</em>anymore!' in French while wielding a Sawzall and laughing maniacally.</p><p>We're not sure what, exactly, the end result is going to look like, but MotorAuthority has a few ideas. As for us, we assume that it's going to look like an Ed 'Big Daddy' Roth creation come to life, driven by a beret-wearing Rat Fink with a pencil moustache while cruising for chicks on the<strong>&nbsp;</strong>Champs-Élysées.</p>",
+			"link-source": "https://www.motor1.com/news/346608/hemi-swapped-porsche-911-cabrio/",
+            "author": "Hai Binh",
+            "views": "187",
+            "img":"https://cdn.motor1.com/images/mgl/mBE3A/s4/hemi-powered-911-project.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "11",
+            "category": "Humor",
+            "kind":"Weird",
+            "title": "Miami's First Flying Car Skyport Nears Completion",
+            "tag": [
+                "Humor",
+                "Weird",
+                "Car",
+                "Design",
+                "Tech",
+                "Rumor"
+            ],
+            "content": "<h2>Though, there are still no flying cars in sight.</h2><p>Flying cars probably aren’t the future shows like <em>The Jetsons</em> led us to believe. At least, not at their current rate. But whether you think flying cars have a chance or not, some companies are seriously prepping for a futuristic sky filled with these flying machines. One building developer in Miami, Florida, in particular, is evidence of that.</p><p>A residential skyscraper nearing completion in downtown Miami is following through with plans for a 'sky deck' announced a year ago, serving its wealthy customer’s flying cars. According to WSVN 7 News, the 60-story Paramount Miami World Center, when finished, will have a first-of-its-kind dedicated flying car landing space. CEO and developer, Daniel Kodsi, says his inspiration for the idea came (of course) from the cartoon <em>The Jetsons</em>.</p><img src='https://cdn.motor1.com/images/mgl/18QKL/s4/miami-skyport.jpg' alt='Miamis First Flying Car Skyport Nears Completion'><h2>Are Flying Cars The Future?</h2><p>Ever since <em>The Jetsons</em> came out, America’s been talking about flying cars, Kodsi said in an interview. It’s something that inspires you, something that you think about when you’re building a project. You’re saying, 'Well, what is the future? What’s going to happen in the future?'</p><p>'You can actually come to your home, land on your roof, and instead of coming in through the lobby on the ground floor, you can access your home from the roof,' said Kodsi.</p><p>Kodsi guesses that Miami’s overly congested highways and grid-locked streets will cause a demand in South Florida for flying cars, especially within the affluent community. He also notes that he is currently in talks with a number of flying vehicle manufacturers – none of which, by the way, have a flying car currently available to the general public.</p><p>The Paramount Miami World Center will have over 500 high-end units, with more than two dozen luxury penthouses when completed, and one 'sky deck.' The building, developers promise, should be done before the end of the year.</p>",
+			"link-source": "https://www.motor1.com/news/346600/miami-flying-car-sky-port/",
+            "author": "Quoc Bao",
+            "views": "891",
+            "img":"https://cdn.motor1.com/images/mgl/18QKL/s4/miami-skyport.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "12",
+            "category": "Humor",
+            "kind":"Weird",
+            "title": "Factory-Built 1991 Dodge Dual Axle Ram Van",
+            "tag": [
+                "Humor",
+                "Weird",
+                "Design",
+                "Tech"
+            ],
+            "content": "<h2>A custom Dodge conversion van with six wheels is the only way to travel.</h2><p>They heyday of custom vans may have been in the mid-to-late '70s, but apparently, nobody told Dodge. Back in '91, they built this wild, six-wheeled creation, and it's one of the coolest custom vans we've ever seen.</p><p>Apparently, only the middle axle is driven. The other axle serves only to help with weight distribution, apparently a concern for an extra-long van like this one. Consider as well that this isn't just a long cargo van or a church bus filled with rows of seats –this is a fully-appointed conversion van. There's going to be a lot more weight back there, and, besides, it looks super cool with two rear axles.</p><h2>More Van-Tastic News:</h2><p>The van was discovered by Barn Finds. It's currently being sold on eBay by a Hot Wheels collector in Tucson, Arizona. We echo Barn Finds' sentiment that this is an appropriate vehicle for a Hot Wheels collector, as it looks like a life-size version of the over-the-top customs Hot Wheels is best known for, right down to the big chrome wheels and white-letter tires.</p><p>The van was apparently built for a Los Angeles Dodge dealer, who convinced the company to build him this unique, one-of-one van. Now on its fourth owner, the van was purchased in Las Vegas before making its way to Tucson.</p><img src='https://cdn.motor1.com/images/mgl/PY2kX/s4/three-axe-dodge-conversion-van.jpg' alt='Factory-Built 1991 Dodge Dual Axle Ram Van'><p>Despite some sun-fading on the exterior and plush maroon interior, this van still presents very well, and looks like an amazingly comfortable way to travel down the highway. We can't imagine a more perfect road trip vehicle.</p><p>If you're looking to add this to your fleet, the Buy It Now price of $13,000 seems more than fair for such a unique cross-country traveler. With a little freshening up, you can party like it's 1991 –or 1977.</p>",
+			"link-source": "https://www.motor1.com/news/334296/six-wheel-dodge-conversion-van/",
+            "author": "Quoc Anh",
+            "views": "842",
+            "img":"https://cdn.motor1.com/images/mgl/PY2kX/s4/three-axe-dodge-conversion-van.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "13",
+            "category": "Motor",
+            "kind":"Motorcycles",
+            "title": "Harley-Davidson Gets With The Times. Or Does It?",
+            "tag": [
+                "Motor",
+                "Motorcycles",
+                "Design"
+            ],
+            "content": "<h2>The iconic American motorcycle company seems to be modernizing everything but its motorcycles.</h2><p>Recently, Harley-Davidson has made some moves I never expected. Best known for big classic American cruisers, Harley recently announced that it will be sponsoring a Formula E team, of all things. Stranger than that is Harley's partnership with Trials Frontier, a smartphone game involving riding a bike over, under, and through a variety of obstacles. Neither of these marketing ploys would interest Harley's traditional grey-haired, leather-wearing demographic in the slightest, appealing far more to younger people.</p><h2>The Times They Are A-Changin</h2><p>The younger generations are absolutely crucial to Harley-Davidson's survival. Contrary to popular belief&nbsp;they are not killing motorcycling, but companies that don't offer the affordable practical bikes they are looking for will suffer as older riders—Harley's current bread and butter—age out of motorcycling. Models like the Street 500 and 750&nbsp;are a genuinely good start down the right track, but they still don't offer the value that younger riders are looking for, or the performance that enthusiasts generally have to turn to foreign models to find.</p><img src='https://cdn.motor1.com/images/mgl/2kjlx/s4/2019-livewire.jpg' alt='Harley-Davidson Gets With The Times. Or Does It?'><p>I say 'generally' because Indian is changing the rules with its FTR 1200. Here's an American company making a true performance-oriented motorcycle, completely outside of its traditional image of big comfy cruisers. Yet it's also true to Indian's heritage, drawing from its American Flat Track Racing success. Currently, the closest you can get to this experience on a Harley is the XG750R in Trials Frontier. I've wasted a lot of time on this game... I mean, performed extensive research into this computerized simulation of Harley's own flat track racer. As best as I can determine after hours of testing, it's nothing like riding a real motorcycle.</p><p>Therein lies the problem. Harley is doing a great job lately of getting involved in activities that younger people care about, but there is no direct tie-in to existing motorcycles once Harley has their attention. Formula E is no doubt connected to fueling interest in the LiveWire, but a five-year-old design and nearly $30,000 price tag are not going to retain that interest. A smartphone game is fun and clever, but the closest thing Harley offers to an XG750R is the Street 750. Players of the game won't make that already tenuous connection. Did you know that Harley refers to the Street 750 as the XG750, just one letter off from the bike in the game? I didn't until I researched the Street 750 for this article.</p><p>Harley-Davidson is one of the most well-known brands in America, regardless of whether you're interested in motorcycles or not. Stretching this branding into new areas that appeal to a younger demographic is a smart marketing move. It takes more than marketing to get people to buy your products, though. As much as Harley is about the lifestyle as much as the machines, it's the machines themselves that matter to would-be riders. It takes an actual product that such people are interested in buying. At the moment, Harley still has none.&nbsp;</p>",
+			"link-source": "https://www.rideapart.com/articles/346609/harley-davidson-gets-with-times/",
+            "author": "Quoc Anh",
+            "views": "144",
+            "img":"https://cdn.motor1.com/images/mgl/2kjlx/s4/2019-livewire.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "14",
+            "category": "Motor",
+            "kind":"Motorcycles",
+            "title": "Motorcycles May Become Trade War Victims Again",
+            "tag": [
+                "Motor",
+                "Motorcycles",
+                "Celebrity"
+            ],
+            "content": "<h2>New proposed tariffs against Europe would include mid-size motorcycles, plus parts and accessories.</h2><p>The latest escalation of the tariff war between the United States and Europe may once again include motorcycles, this time bikes imported from Europe.</p><img src='https://cdn.motor1.com/images/mgl/y8PVY/s4/duke-790-action.jpg' alt='Motorcycles May Become Trade War Victims Again'><h2>A War With No Winners</h2><p>This time the beef is primarily about airplanes, according to the&nbsp;<em>Financial Post</em>. This is a long-standing feud with each side accusing the other of illegally subsidizing its large aircraft manufacturers, Boeing in the U.S. and Airbus in Europe. The latest proposed tariffs would cover a wide variety of other European imports as well, such as seafood, cheese, wine, wall clocks, and artists' brushes. It would also affect a very specific section of motorcycles with engine displacements between 500 and 700 cc as well as motorcycle parts and accessories.</p><p>If this sounds like recent history repeating itself, that's because it is. Just last year, Europe slapped a tariff on American motorcycles in retaliation for U.S. tariffs on European steel and aluminum. Harley-Davidson and Indian then moved some production overseas to avoid this tariff, a move slammed by President Trump.</p><p>The small range of engine displacements included in the latest tariff would limit the number of affected models, including only bikes like the KTM 690 Duke and Enduro R. The Husqvarna 701s are just barely exempt. The parts and accessories are where the tariff would hit our wallets since parts for all models would be affected. Though not nearly as bad as a proposed 100 percent tariff on all European motorcycles under 500 cc, it would still make it more expensive to trick out your current Euro ride, as well as keep it running.</p><p>Why penalize motorcycles in a tariff about commercial aircraft? At least they're vehicles, unlike the binoculars, oscilloscopes, and ferrosilicon manganese included in the tariff. Unfortunately, tariffs have a long history of causing a great deal of collateral damage with items that have nothing to do with the actual source of the disagreement with the affected country. The most well known of these is probably the so-called 'Chicken Tax,' a tariff on imported light trucks that was implemented in retaliation for a European tariff on chickens imported from the U.S. This occurred in 1964 and is still in effect today.</p>",
+			"link-source": "https://www.rideapart.com/articles/345540/motorcycles-trade-war-victims-again/",
+            "author": "Quoc Bao",
+            "views": "845",
+            "img":"https://cdn.motor1.com/images/mgl/y8PVY/s4/duke-790-action.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "15",
+            "category": "Motor",
+            "kind":"Motorcycles",
+            "title": "New York City To Introduce Congestion Toll, No Exemption For Motorcycles",
+            "tag": [
+                "Motor",
+                "Motorcycles",
+                "Rumor"
+            ],
+            "content": "<h2>There's no exemption YET. Go fight this, New Yorkers!</h2><p>On Sunday night, March 31, 2019, New York state lawmakers approved a first-in-the-nation plan to implement congestion pricing in the busiest parts of New York City. The hope is that this new toll will ease traffic congestion during the busiest parts of the day by encouraging people to take mass transit instead of driving or, apparently, riding motorcycles.</p><p>If you have any plans to drive into midtown anywhere between 60th street and the Battery, which is pretty much all of lower Manhattan, during rush-hours and peak business hours, it will soon cost you over $10 for each trip. The price has not yet been set, as well there are no exemptions for any other type of vehicle yet. There is talk of exemptions for low-income or disabled drivers.</p><img src='https://cdn.motor1.com/images/mgl/3ZRO6/s4/tiger-in-traffic.jpg' alt='New York City To Introduce Congestion Toll, No Exemption For Motorcycles'><p>New York City plans to use the increased toll revenue to help repair the city’s subway system as well as ease traffic and make it slightly easier for those who do choose to drive, to get around. These tolls will not go into effect until 2021, so now is the time, New Yorkers, to start making noise to have motorcycles exempted from this toll.</p><p>No doubt this toll will be collected electronically, with toll gantries, or antennas mounted on pre-existing structures, and RFID transponders on vehicles. Those of us who have to use these on roadways already (they are all over the northeast corridor) know they work most of the time at best. Finding a transponder mounting position on a motorcycle where it won’t get lost or stolen, though, is a tough proposition.</p><p>Several European and Asian cities already have a congestion toll in place. The practice has reduced traffic, and with it air pollution. In three of the cities often held up as shining examples of success with this type of toll: London, Singapore and Stockholm; lane-splitting is legal, so not only do motorcycles have a distinct advantage in traffic but they do not contribute to the congestion. This is not the case in New York City, and with its mass transit system that is fragile at best, it has a long way to go to catch up with the rest of the world.</p>",
+			"link-source": "https://www.rideapart.com/articles/337070/nyc-congestion-no-exemption-motorcycles/",
+            "author": "Hai Binh",
+            "views": "148",
+            "img":"https://cdn.motor1.com/images/mgl/3ZRO6/s4/tiger-in-traffic.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "16",
+            "category": "Motor",
+            "kind":"Motorhomes",
+            "title": "Turn Any Car Into A Camper With This Pop-Up Roof Tent",
+            "tag": [
+                "Motor",
+                "Motorhomes",
+                "Weird",
+                "Design"
+            ],
+            "content": "<h2>There's room for two people inside and a telescoping ladder makes for easier access.</h2><p>If you're feeling jealous of the lavish camping rigs that we often feature on <em>Motor1.com</em> and want to see something a little more modest, check out the&nbsp;Roofnest&nbsp;Sandpiper pop-up tent. As the name suggests, it attaches to the roof of your vehicle and provides a place off the ground to spend the night. At&nbsp;$2,795, the Sandpiper is a fairly affordable option, too. While the press photos show the tent on a Toyota Tacoma, the mounting hardware works on a variety of vehicles, including ones without&nbsp;roof rails.</p><p>The roof of the tent has an aluminum rack can support up to 100 pounds, and this lets the&nbsp;Sandpiper double as a mounting point for your bikes or other gear. The interior measures 6 feet 10 inches long (2.083 meters) by 4 feet (1.219 meters) wide,&nbsp;and Roofnest says there is enough room inside for two adults. A 2.756-inch (7-centimeter) thick high-density foam mattress and 0.4-inch (1-cm) thick&nbsp;marine-grade anti-condensation mat keeps sleepers comfy. A telescoping ladder makes getting inside a lot easier, too. If you want to enjoy nature from the top of your vehicle,&nbsp; there are zip-out mesh and canvas sections on four sides.</p><img src='https://cdn.motor1.com/images/mgl/lL996/s4/roofnest-sandpiper.jpg' alt='Turn Any Car Into A Camper With This Pop-Up Roof Tent'><p>Clip-on pockets attach to the outside for extra storage, like if you don't want dirty boots in the tent. Owners can unfold a 4-feet by 6-feet (1.829-meter) mesh mat on the ground so that they don't have to step in mud when climbing down.</p><p>The tent collapses when not in use, and mounts to the vehicle on&nbsp;cross-braced aluminum rails and reinforcement plates. Metal clamps provide extra security of keeping it closed on the road.</p>",
+			"link-source": "https://www.motor1.com/news/344287/sandpiper-rooftop-camper/",
+            "author": "Quoc Bao",
+            "views": "915",
+            "img":"https://cdn.motor1.com/images/mgl/lL996/s4/roofnest-sandpiper.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "17",
+            "category": "Motor",
+            "kind":"Motorhomes",
+            "title": "Tesla Model S-Based Roamer Motorhome Is Real And Coming Soon",
+            "tag": [
+                "Motor",
+                "Motorhomes",
+                "Weird",
+                "Design"
+            ],
+            "content": "<h2>The prototype will debut next week in Michigan.</h2><p>Folks, it was inevitable. The EV revolution in automobiles is happening right now, and it just so happens to coincide with a major global resurgence in camping and the whole <em>vanlife</em> thing. We know that electric RVs are already out there, but as far as we can tell, this would be the first Tesla-based motorhome in the world.</p><h2>Camping Done Differently:</h2><p>The mastermind behind this project is a man named Travis Rabenberg. You might expect this build to incorporate Tesla’s Model X SUV, but it’s actually based on the Model S P90D. Rabenberg calls it the Tesla Roamer, and as you can see, it deletes the sedan’s rear haunches for a small living space that has a pop-up roof, a bed, and provisions for water to operate a sink and toilet. And since you can't have an electric motorhome without solar power, the Tesla Roamer incorporates a solar panel with the capability of generating 1,000 watts of juice.</p><img src='https://cdn.motor1.com/images/mgl/B87ye/s3/tesla-roamer-motorhome.jpg' alt='Tesla Roamer Motorhome'><p>There’s another interesting aspect to this particular build. Rabenberg isn’t simply seeking to create an electric camper with decent range; he wants it to be exciting, as well. With the foundation being a P90D, its electric powertrain can generate up to 691 horsepower (515.2 kilowatts). Provided all your camping gear is properly stowed in the back, acceleration for the Tesla Roamer should be brisk, to say the least. In fact, Rabenberg expects this RV to hit 150 miles per hour, which would be enough to set a new Guinness World Record for the fastest motorhome, and yes, he already has plans to go for the record. We suspect such velocity is of little interest to typical RV fans, but this isn't a typical RV. And honestly, having a camper that can hang with cars on the Autobahn certainly has some cool factor.</p><p>At this point, we only have a couple sketches of the project, but we’re told this isn’t just a bit of vaporware. Rabenberg plans to show off the Tesla Roamer prototype next week at a special event in Michigan focusing on electric vehicles. His mission is to promote sustainable travel and appeal to younger generations who may not be interested in larger campers that are undeniably thirsty with fuel.</p><p>As such, Rabenberg plans to take his Tesla Roamer on a cross-country tour this summer, then jump across the pond to drive from the UK to Dubai for the 2020 World Expo. We'll bring you more from the prototype's debut in Michigan next week, and again when Rabenberg completes the finished build.&nbsp;</p>",
+			"link-source": "https://www.motor1.com/news/343921/tesla-roamer-motorhome-coming-soon/",
+            "author": "Quoc Anh",
+            "views": "1120",
+            "img":"https://cdn.motor1.com/images/mgl/B87ye/s3/tesla-roamer-motorhome.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "18",
+            "category": "Motor",
+            "kind":"Motorhomes",
+            "title": "Pinnacle Finetza Is Futuristic Indian RV You've Never Heard Of",
+            "tag": [
+                "Motor",
+                "Motorhomes",
+                "Weird",
+                "Design"
+            ],
+            "content": "<h2> Depending on configuration, it can sleep up to eight people.</h2><p>Looking like a Ford E-Series van of the future, the Pinnacle&nbsp;Finetza is a luxury motorhome from India that hides a neat trick in the back. Upon arriving at your destination, the rear extends to make a little more space for the folks inside. Pinnacle claims that its the first Indian firm to offer an expandable RV.&nbsp;</p><img src='https://cdn.motor1.com/images/mgl/xMJBG/s3/pinnacle-finetza-rv.jpg' alt='Pinnacle Finetza RV'><p>The&nbsp;Finetza's interior looks quite plush but with a very beige color scheme in these images. A customer could tweak the shades, though. Buyers can also customize the seating arrangement throughout the rest of the vehicle to include recliners or a motorized sofa that converts into a bed. A fixed sleeping area is available, too. A variety of table layouts include folding and sliding designs for getting rid of them when the flat areas aren't necessary. Depending on the configuration, a Finetza can sleep two to eight people.</p><h2>RVs and Motorhomes come in all shapes and sizes:</h2><p>When it's time to relax, there are multiple screens around the cabin, and there's a home theater system for connecting things like video game consoles, movie streaming equipment, or music devices. Adjustable ambient lighting lets owners set the mood.</p><p>For keeping fed, the&nbsp;Finetza has a tiny kitchenette that includes&nbsp;a&nbsp;refrigerator, oven, and electric kettle. The bathroom comes standard with a toilet, and there's an optional shower.</p><p>Pinnacle doesn't offer many technical&nbsp;details about the&nbsp;Finetza. The company's website only mentions that it has a monocoque body and air suspension. The firm doesn't offer powertrain details about the machine, though.</p>",
+			"link-source": "https://www.motor1.com/news/308182/pinnacle-finetza-luxury-rv-india/",
+            "author": "Hai Binh",
+            "views": "564",
+            "img":"https://cdn.motor1.com/images/mgl/xMJBG/s3/pinnacle-finetza-rv.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "19",
+            "category": "Modern",
+            "kind":"Technology",
+            "title": "Jaguar's Design Boss Hates Big Touch Screens",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Car",
+                "Design"
+            ],
+            "content": "<h2>We won't be seeing them on new Jags any time soon.</h2><p>Ian Callum has penned some of the most beautiful modern cars ever created, so when he talks, we listen.</p><p>The long-time Jaguar designer, who also penned the likes of the Ford RS200, Aston Martin DB7, and original Vanquish earlier in his career has said that we won't be seeing any giant Tesla-esque touchscreens like the one pictured below in any of his cars though, despite increasing industry trends.</p><p>Speaking at a presentation of the updated Jaguar XE called out the touchscreens which are appearing in more and more new cars, responding to questions as to whether he'd be integrating them into his designs by saying: 'not if I can help it.'</p><img src='https://cdn.motor1.com/images/mgl/9Vlnv/s3/tesla-model-x-first-drive.jpg' alt='Tesla Model X First Drive'><p>'If you're driving 80-90 miles an hour – and you can in some countries, legally – you don't want to be flipping around an iPad looking to move your door mirrors or your seat controls,'' Callum is quoted by <em>Automotive News Europe</em>. 'You need to be able to feel your way through the car without looking at it for more than a millisecond.'</p><p>The new XE, which Callum was showcasing, has a pair of screens. One on the top shows important vehicle and driving information, while the bottom one shows less vital things such as climate control. It also retains some old-school tactile interface features to keep the driver feeling involved.</p><img src='https://cdn.motor1.com/images/mgl/qjRMv/s3/2020-jaguar-xe.jpg' alt='2020 Jaguar XE'>",
+			"link-source": "https://www.motor1.com/news/346906/ian-callum-hates-big-touch-screens/",
+            "author": "Hai Binh",
+            "views": "619",
+            "img":"https://cdn.motor1.com/images/mgl/PwlK2/s4/tesla-model-x-first-drive.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "20",
+            "category": "Modern",
+            "kind":"Technology",
+            "title": "Hyundai Kia To Offer EV Owners Performance Tuning app",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Car"
+            ],
+            "content": "<h2>New app system will allow drivers to choose power outputs and efficiency settings.</h2><p>Hyundai and Kia are developing a new smartphone integration kit that allows drivers to choose how powerful, fast and efficient their electric car will be on a given journey.</p><p>The 'performance adjustment technology' will allow owners of Hyundai and Kia’s electric cars to set parameters for the car’s maximum speed limiter, power delivery, and responsiveness, as well as the climate control’s energy consumption and the forcefulness of the regenerative braking – all via an app. The system will also allow owners to set profiles for the car, with different drivers able to use their chosen setup.</p><p>Although it is currently in development by the two South Korean companies’ parent firm, Hyundai</a> Motor Group, the app is also said to unlock the ability to move drivers’ preferences between vehicles, with the next electric car simply downloading and applying the parameter’s set by the customer's phone.</p><h2>The Future Is Now:</h2><p>And customers will even be able to share their setups with other drivers, allowing users to try other users' parameters. And Hyundai and Kia will upload their own setups, which will be designed to suit different driving conditions. For example, the brands will provide settings for city streets, mountain passes, and country roads, among others.</p><p>Furthermore, the system will use data from the driver’s smartphone to calculate the most efficient settings for a designated destination by analyzing the distance to the location and the electric energy requirement. It can also accommodate sportier driving by recommending tailored performance settings.</p><p>The whole system will be secured with blockchain technology, which Hyundai Motor Group says will 'prevent security issues' while users upload and share their settings. The whole system works by encrypting major performance parameters in a blockchain network by creating new data blocks and storing them to stop any 'unauthorized manipulation.'</p><img src='https://cdn.motor1.com/images/mgl/AEmYO/s3/hyundai-motor-group-smartphone-performance-adjustment.jpg' alt='Hyundai Motor Group smartphone performance adjustment'><p>'As Hyundai Motor Group is planning to deploy 44 eco-friendly models by year 2025, including 23 electric vehicles, we see the potential of technologies and services inherent in non-combustion vehicles,' said research fellow JeongSoo Eo, from the Hyundai Motor Group. 'By developing paradigm-shifting mobility technology like this one, we will continue to strive to improve user experience for electric vehicles customized to individual preferences.'</p>",
+			"link-source": "https://www.motor1.com/news/346901/hyundai-kia-ev-tuning-apps/",
+            "author": "Quoc Anh",
+            "views": "564",
+            "img":"https://cdn.motor1.com/images/mgl/2oAx4/s4/hyundai-motor-group-smartphone-performance-adjustment.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "21",
+            "category": "Modern",
+            "kind":"Technology",
+            "title": "Charging Apple Pencils Are Preventing Owners From Unlocking Their Cars",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Car",
+                "Design"
+            ],
+            "content": "<h2>Technology is a wonderful thing, when it works – and doesn't prevent other things from working in the process.</h2><p>Ah, 2019. Even now, it sounds so futuristic, so wondrous, so full of potential. We thought we'd be colonizing Mars and driving flying cars by now. Instead, 2019 is a time when your electronic pencil prevents you from unlocking your car. What a time to be alive.</p><p>According to our friends at The Drive, owners of the Apple Pencil 2 are reporting issues using their car's electronic key fob in the vicinity of their pencil while it's attached to an iPad and charging. Before we get into that, let's take a step back and explain what the Apple Pencil 2 does in the first place.</p><img src='https://cdn.motor1.com/images/mgl/W393L/s4/apple-pencil-2.jpg' alt='Charging Apple Pencils Are Preventing Owners From Unlocking Their Cars'><h2>More Apple Automotive News:</h2><p>The Apple Pencil 2 is a peripheral for the iPad Pro that resembles a stylus. It's a useful tool for artists and other creative types to sketch out ideas on the go. One cool feature of the Pencil 2 compared to the previous model is inductive charging. It attaches to the iPad Pro magnetically and is then wirelessly charged by the tablet. Cool.</p><p>What's not cool, though, is that, when charging, the Apple Pencil 2 generates frequencies that can interfere with some car key fobs. It's not a huge issue, but an annoying one – you'll have to either manually unlock your car, or separate the Apple Pencil 2 from your iPad Pro prior to unlocking it.</p><p>Unlike software bugs, this problem can't simply be patched out – it's hardware related. Apple's fix? Like we said above, separating the Pencil from the iPad Pro solves the problem. During regular use, the Pencil generates frequencies in a completely different range that poses no problems for remote keyfobs. It's only a problem when it's connected and charging.</p><p>The good news for owners of these devices is that it doesn't seem to affect every car keyfob, only some of them. If you happen to own an Apple Pencil 2 and you've had issues unlocking your car, let us know what you drive in the comments below.</p>",
+			"link-source": "https://www.motor1.com/news/345394/apple-pencil-2-car-keyfob/",
+            "author": "Quoc Bao",
+            "views": "561",
+            "img":"https://cdn.motor1.com/images/mgl/W393L/s4/apple-pencil-2.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "22",
+            "category": "Modern",
+            "kind":"Special",
+            "title": "Volkswagen's New Police 'Riot' Van Conversion Revealed",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Design"
+            ],
+            "content": "<h2>The timing is impeccable during ongoing climate change protests in London.</h2><p>Volkswagen Commercial Vehicles has unveiled a new U.K.&nbsp;police riot van conversion for its Crafter van.</p><p>The new vehicle, which will debut at The Commercial Vehicle (CV) Show 2019 next week, features a windscreen made from 'unbreakable' plastic and new side windows, as well as a prison cell in the rear, a bespoke racking solution for riot gear, and room for seven people.</p><p>That tougher windscreen, made from 'Kasiglas,' also negates the need for metal bars across the windscreen, reducing weight and improving visibility.</p><h2>Have You Seen These New Police Cars?</h2><img src='https://cdn.motor1.com/images/mgl/3XvQR/s4/volkswagen-crafter-police-support-unit.jpg' alt='Volkswagens New Police Riot Van Conversion Revealed'><p>The conversion was done by Volkswagen Commercial Vehicles’ Accredited Blue Light Conversion Partner Coleman Milne Specialist Vehicles in Wigan, and uses the five ton, long wheelbase Volkswagen Crafter in Trendline trim as the base vehicle. Power comes from Volkswagen's 2.0-liter 175-horsepower diesel engine.</p><p>'We’re delighted to reveal our latest blue light conversion – a riot van based on the long wheelbase Volkswagen Crafter – after months of hard work by our dedicated team alongside our Accredited Blue Light Conversion Partner, Coleman Milne,' said Steven Cowell, Technical Sales Manager at Volkswagen Group Fleet Services. 'Following its much-anticipated debut at the CV Show 2019, the PSU will be put into service across the country supporting police forces in their vital roles.'</p><p>The Volkswagen Crafter PSU will be on display on Volkswagen Commercial Vehicles’ stand at the CV Show 2019, which takes place at the Birmingham NEC from April 30 to May 2. It will then be made available for loan and trials to police forces across the country.</p>",
+			"link-source": "https://www.motor1.com/news/346899/volkswagen-crafter-riot-van-conversion/",
+            "author": "Quoc Bao",
+            "views": "156",
+            "img":"https://cdn.motor1.com/images/mgl/3XvQR/s4/volkswagen-crafter-police-support-unit.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "23",
+            "category": "Modern",
+            "kind":"Special",
+            "title": "EU Votes To Make 'Life-Saving' Safety Kit Mandatory On New Cars",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Design",
+                "Car"
+            ],
+            "content": "<h2>The new legislation could be introduced in Europe in the next three years.</h2><p >A host of high-tech safety features will have to be fitted to new cars sold in the European Union after MEPs voted to introduce new rules.</p><p>Under the new plans, any car sold in the European Union will have to feature Intelligent Speed Assistance, which notifies the driver when the vehicle is travelling faster than the speed limit, as well as lane-keeping assistance, which is designed to help prevent the car wandering out of its lane. The laws also mean new cars will have to come with autonomous emergency braking (AEB) systems that can detect impending collisions with vehicles, pedestrians and cyclists, then apply the brakes automatically to prevent or mitigate the crash.</p><p>A handful of other gizmos will also be made mandatory in all vehicles, including a driver drowsiness warning system and hardware that allows an alcohol interlock (a device that makes the driver pass a breath test before starting the vehicle) to be fitted at a later date.</p><img src='https://cdn.motor1.com/images/mgl/OjE0o/s4/self-driving-car-sensors-detect-cyclists-and-pedestrians-illustration.jpg' alt='EU Votes To Make Life-Saving Safety Kit Mandatory On New Cars'><h2 >Safety is of utmost importance:</h2><p>The new legislation, which could be introduced in Europe in the next three years, will also make changes to the safety features of commercial vehicles, with a new “direct vision” standard that reduces the size of trucks’ blind spots. At the same time, vans and trucks will need to be fitted with tire pressure monitoring systems, too. Although previously only necessary on passenger cars, the systems, which warn the driver of a deflated tire, will become mandatory for all vehicles.</p><p>Róża Thun, a Member of the European Parliament for Poland, said she was proud that the European Parliament had introduced life-saving regulation.</p><p>'Safety of road users, especially unprotected ones, is our focus,' she said. 'This regulation deals in the most direct sense with life and death. We concentrated all our efforts on saving lives and mitigating injuries. The additional obligatory equipment for cars, trucks and buses will save human lives. I am very proud of the European Parliament; despite all our differences, the members supported this ambitious proposal.'</p><h2>The timing is impeccable during ongoing climate change protests in London.</h2><p>Volkswagen Commercial Vehicles has unveiled a new U.K.&nbsp;police riot van conversion for its Crafter van.</p><p>The new vehicle, which will debut at The Commercial Vehicle (CV) Show 2019 next week, features a windscreen made from 'unbreakable' plastic and new side windows, as well as a prison cell in the rear, a bespoke racking solution for riot gear, and room for seven people.</p><p>That tougher windscreen, made from 'Kasiglas,' also negates the need for metal bars across the windscreen, reducing weight and improving visibility.</p><h2>Have You Seen These New Police Cars?</h2><img src='https://cdn.motor1.com/images/mgl/3XvQR/s4/volkswagen-crafter-police-support-unit.jpg' alt='Volkswagens New Police Riot Van Conversion Revealed'><p>The conversion was done by Volkswagen Commercial Vehicles’ Accredited Blue Light Conversion Partner Coleman Milne Specialist Vehicles in Wigan, and uses the five ton, long wheelbase Volkswagen Crafter in Trendline trim as the base vehicle. Power comes from Volkswagen's 2.0-liter 175-horsepower diesel engine.</p><p>'We’re delighted to reveal our latest blue light conversion – a riot van based on the long wheelbase Volkswagen Crafter – after months of hard work by our dedicated team alongside our Accredited Blue Light Conversion Partner, Coleman Milne,' said Steven Cowell, Technical Sales Manager at Volkswagen Group Fleet Services. 'Following its much-anticipated debut at the CV Show 2019, the PSU will be put into service across the country supporting police forces in their vital roles.'</p><p>The Volkswagen Crafter PSU will be on display on Volkswagen Commercial Vehicles’ stand at the CV Show 2019, which takes place at the Birmingham NEC from April 30 to May 2. It will then be made available for loan and trials to police forces across the country.</p>",
+			"link-source": "https://www.motor1.com/news/346899/volkswagen-crafter-riot-van-conversion/",
+            "author": "Quoc Anh",
+            "views": "875",
+            "img":"https://cdn.motor1.com/images/mgl/OjE0o/s4/self-driving-car-sensors-detect-cyclists-and-pedestrians-illustration.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        },
+		{
+            "id": "24",
+            "category": "Modern",
+            "kind":"Special",
+            "title": "Watch Out Cars: New Regs Will Bring Euro-Style Trains To U.S.",
+            "tag": [
+                "Modern",
+                "Tech",
+                "Design",
+                "Rumor",
+                ""
+            ],
+            "content": "<h2>The revised regulations for U.S. train cars are now similar to Euro standards.</h2><p>Here’s something a little different from the daily river of auto-related news. Changes to federal regulations for passenger rail systems in the U.S. now means that European-style passenger rail cars can ride American tracks without extensive modification. That may not seem like a big deal to some, but it could lead to safer travel by rail with reduced ticket prices for those who take the train in the U.S., either for business or pleasure. As a by-product, commuters in cars on the road could also see more trains on the track, and since Amtrak – the primary passenger train operator in the U.S. – says it carries 87,000 customers on trips <em>each day</em>, changes won’t go unnoticed by any means.</p><p>The saga itself is interesting as well, because the previous rules were established at a time when <em>bigger is better</em> was the primary slogan for safety. All passenger train cars in the U.S. needed to withstand a frontal collision impact equivalent to 800,000 pounds, but the regs didn’t really address how that force should be distributed. It’s not unlike crashing a massive 1950’s American sedan into a solid wall versus a modern lightweight hatchback. The big old sedan might fare better, but the hatchback will crumple and absorb the energy from the crash, offering far better protection to the passengers inside.</p><img src='https://cdn.motor1.com/images/mgl/vB82Y/s4/high-speed-train.jpg' alt='Watch Out Cars: New Regs Will Bring Euro-Style Trains To U.S.''><h2>Train kept a-rollin':</h2><p>Apparently there aren’t many U.S. companies building train cars, so prior to the rule changes, Euro-built cars imported to the States had to undergo considerable modification at considerable expense. With U.S. rules more in-tune with Euro standards, that’s no longer the case so not only will the cars be less expensive, they will also be more energy efficient. In theory that should lead to lower ticket prices, and as far as collisions are concerned, Euro and Asian trains are said to have better safety records for the reasons mentioned above. It all sounds like a win-win.</p><p>Yes, we are a car website and of course we enjoy fantastic drives and epic road trips. There are also many people out there, however, who very much fancy a trip over the rails. With new standards in place, it sounds like a cross-country train adventure could be better than ever.</p>",
+			"link-source": "https://www.motor1.com/news/279434/watch-cars-euro-style-trains/",
+            "author": "Hai Binh",
+            "views": "364",
+            "img":"https://cdn.motor1.com/images/mgl/vB82Y/s4/high-speed-train.jpg",
+            "date_publish": "03 - 05 - 2019",
+            "date_write": "28 - 04 - 2019"
+        }
+
+    ]
+}   
