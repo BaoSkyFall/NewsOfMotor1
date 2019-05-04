@@ -194,6 +194,11 @@ bottom: 0;
     left: 8.675%;
     overflow: hidden;
 }
+#news .row .col-lg-3 .link-tag-href 
+{
+    color: black;
+}
+
 #news .row .col-lg-3 .category-title
 {
     position: absolute;
@@ -313,11 +318,29 @@ bottom: 0;
     font-size: 12px;
     
 }
+#news-second .row .col-lg-3 a
+{
+    color: black
+}
+#news-second .row .col-lg-3 a:hover
+{
+    text-decoration: none;
+}
 #news-second .row .col-lg-3 .news2-title p
 {
     font-size: 13px;
 }
 
+#news-second .row .col-lg-3 .news2-title i
+{
+    font-size: 15px;
+    color: red; 
+}
+#news-second .row .col-lg-3 .news2-title span
+{
+    font-size: 14px;
+    color: black    
+}
 #news-third
 {
 

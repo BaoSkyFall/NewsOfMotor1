@@ -49,7 +49,7 @@
             <header id="menu" class="container-fluid">
                     <div class="logo d-flex justify-content-center">
                         <a href="/">
-                            <img src="./images/logo2.png" class="img-fluid" alt="">
+                            <img src="../../../images/logo2.png" class="img-fluid" alt="">
             
                         </a>
                     </div>
@@ -138,7 +138,7 @@
             </div>
         </div>
     </section>
-    <section id="news" class="container">
+    <section id="news" class="container mt-4">
         <div class="row">
             <div class="col-lg-9">
                 <div id="news-container" class="container">
@@ -208,200 +208,92 @@
                 </div>
             </div>
 
-            <div id="side-bar" class="col-lg-3">
-                <!-- Side-bar-1 -->
-                <div class="side-bar-container">
-                    <div class="side-bar-container-heading-main">
+            <div id="side-bar" class="col-lg-3 mt-2">
+                    <!-- Side-bar-1 -->
+                    <div class="side-bar-container">
+                      <div class="side-bar-container-heading-main">
                         <div class="side-bar-container-heading">
-                            <h3 class="bg-warning text-light">WHAT'S HOT?</h3>
+                          <h3 class="bg-warning text-light">WHAT'S HOT?</h3>
                         </div>
-                    </div>
-
-                    <div class="side-bar-container-content">
+                      </div>
+            
+                      <div class="side-bar-container-content">
                         <ul>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-1.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-6.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-5.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-4.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
+                          <% for(var i=0;i<16;i+=4) {%>
+                          <li class="d-flex justify-content-start">
+                            <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
+                            <a href="/news/<%=datanews.News[0].title %>">
+                              <div class="side-bar-container-content-title">
+            
+                                <h4>      <%=datanews.News[i].title %></h4>
+                                <i class="fa fa-calendar"></i>
+                                <span>      <%=datanews.News[i].date_publish %></span>
+                              </div>
+                            </a>
+            
+                          </li>
+                          <% }%>
+                     
                         </ul>
+                      </div>
                     </div>
-                </div>
-                <!-- Side-bar-2 -->
-                <div class="side-bar-container mt-4">
-                    <div class="side-bar-container-heading-main">
+                    <!-- Side-bar-2 -->
+                    <div class="side-bar-container mt-4">
+                      <div class="side-bar-container-heading-main">
                         <div class="side-bar-container-heading">
-                            <h3 class="bg-info text-light">RECENT NEWS</h3>
+                          <h3 class="bg-info text-light">RECENT NEWS</h3>
                         </div>
+                      </div>
+            
+                      <div class="side-bar-container-content">
+                          <ul>
+                              <% for(var i=1;i<16;i+=4) {%>
+                              <li class="d-flex justify-content-start">
+                                <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
+                                <a href="/news/<%=datanews.News[0].title %>">
+                                  <div class="side-bar-container-content-title">
+                
+                                    <h4>      <%=datanews.News[i].title %></h4>
+                                    <i class="fa fa-calendar"></i>
+                                    <span>      <%=datanews.News[i].date_publish %></span>
+                                  </div>
+                                </a>
+                
+                              </li>
+                              <% }%>
+                         
+                            </ul>
+                      </div>
                     </div>
-
-                    <div class="side-bar-container-content">
-                        <ul>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-2.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-3.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-6.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-5.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Side-bar-3 -->
-                <div class="side-bar-container mt-4">
-                    <div class="side-bar-container-heading-main">
+                    <!-- Side-bar-3 -->
+                    <div class="side-bar-container mt-4">
+                      <div class="side-bar-container-heading-main">
                         <div class="side-bar-container-heading">
-                            <h3 class="bg-danger text-light">DON'T MISS</h3>
+                          <h3 class="bg-danger text-light">DON'T MISS</h3>
                         </div>
+                      </div>
+            
+                      <div class="side-bar-container-content">
+                          <ul>
+                              <% for(var i=2;i<16;i+=4) {%>
+                              <li class="d-flex justify-content-start">
+                                <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
+                                <a href="/news/<%=datanews.News[0].title %>">
+                                  <div class="side-bar-container-content-title">
+                
+                                    <h4>      <%=datanews.News[i].title %></h4>
+                                    <i class="fa fa-calendar"></i>
+                                    <span>      <%=datanews.News[i].date_publish %></span>
+                                  </div>
+                                </a>
+                
+                              </li>
+                              <% }%>
+                         
+                            </ul>
+                      </div>
                     </div>
-
-                    <div class="side-bar-container-content">
-                        <ul>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-2.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                    <!-- <img src="../../../images/xe-lon-1.jpg" class="img-fluid" alt="">
-                                <div class="menu-carousel-content position-absolute">
-                                  <h5>Genesis Essentia Might Arrive In 2021, Company Boss Hints</h5>
-                      
-                                  <i class="fa fa-calendar"></i>
-                                  <span>21 - 04 - 2019</span>
-                                  <i class="fa fa-comments"></i>
-                                  <span> 50</span>
-                                </div> -->
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-3.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-6.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                            <li class="d-flex justify-content-start">
-                                <img src="../../../images/xe-lon-5.jpg" class="img-fluid" alt="">
-                                <a href="/news">
-                                    <div class="side-bar-container-content-title">
-
-                                        <h4>Does US Tax Overhaul Violate Global Trade.</h4>
-                                        <i class="fa fa-calendar"></i>
-                                        <span>28 - 04 - 2019</span>
-                                    </div>
-                                </a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                  </div>
 
         </div>
 
