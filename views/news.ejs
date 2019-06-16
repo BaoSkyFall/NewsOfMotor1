@@ -44,8 +44,7 @@
 
   
     </section>
-    <% datanews.News.forEach(function(baiviet){%>
-        <% if(baiviet.title === title){ %>
+
             <header id="menu" class="container-fluid">
                     <div class="logo d-flex justify-content-center">
                         <a href="/">
@@ -121,7 +120,7 @@
             <div class="owl-stage-outer">
                 <div class="owl-stage">
                     <div class="owl-item">
-                        <img src="<%=baiviet.img %>" alt=""> </div>
+                        <img src="<%=news[0].img %>" alt=""> </div>
                     <!-- <div class="owl-item">
                         <img src="../../../images/xe-lon-2.jpg" alt=""> </div>
                     <div class="owl-item">
@@ -143,11 +142,11 @@
             <div class="col-lg-9">
                 <div id="news-container" class="container">
                     <div class="news-author">
-                        <img src="../../../images/author-2.jpg" class="img-fluid" alt="">
-                        <h6 class="d-inline"><%=baiviet.author %></h6>
+                        <img src="<%=news[0].avatar %>" class="img-fluid" alt="">
+                        <h6 class="d-inline"><%=news[0].author %></h6>
                     </div>
                     <div class="news-content">
-                      <%-baiviet.content %>
+                      <%-news[0].NoiDung %>
                     </div>
 
 
@@ -299,8 +298,7 @@
 
 
     </section>
-    <% }%>
-    <% }) %>
+
     <footer id="footer" class="bg-dark">
         <div class="footer-container container">
             <div class="row">

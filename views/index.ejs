@@ -113,46 +113,47 @@
           <div class="carousel-inner">
             <%{ %>
               <div class="carousel-item active">
-                <a href="/news/<%=datanews.News[0].title %>">
-                  <img class="d-block w-100" src="<%=datanews.News[0].img %>" alt="First slide">
+                <a href="/news/<%=allnewsest[0].title %>">
+                  <img class="d-block w-100" src="<%=allnewsest[0].img %>" alt="First slide">
                   <div class="carousel-caption d-none d-md-block">
                     <h2>
-                      <%=datanews.News[0].title %>
+
+                      <%=allnewsest[0].title %>
                     </h2>
                     <p>
-                      <%=datanews.News[0].title %>
-                        <%=datanews.News[1].title %>
+                      <%=allnewsest[0].title %>
+                        <%=allnewsest[1].title %>
                     </p>
                   </div>
                 </a>
               </div>
               <div class="carousel-item">
-                <a href="/news/<%=datanews.News[13].title %>">
-                  <img class="d-block w-100" src="<%=datanews.News[13].img %>" alt="Second slide">
+                <a href="/news/<%=allnewsest[1].title %>">
+                  <img class="d-block w-100" src="<%=allnewsest[1].img %>" alt="Second slide">
                   <div class="carousel-caption d-none d-md-block">
                     <h2>
-                      <%=datanews.News[13].title %>
+                      <%=allnewsest[1].title %>
 
 
                     </h2>
                     <p>
-                      <%=datanews.News[13].title %>
-                        <%=datanews.News[0].title %>
+                      <%=allnewsest[1].title %>
+                        <%=allnewsest[3].title %>
                     </p>
                   </div>
                 </a>
               </div>
               <div class="carousel-item">
-                <a href="/news/<%=datanews.News[2].title %>">
-                  <img class="d-block w-100" src="<%=datanews.News[2].img %>" alt="Third slide">
+                <a href="/news/<%=allnewsest[2].title %>">
+                  <img class="d-block w-100" src="<%=allnewsest[2].img %>" alt="Third slide">
                   <div class="carousel-caption d-none d-md-block">
                     <h2>
-                      <%=datanews.News[2].title %>
+                      <%=allnewsest[2].title %>
 
                     </h2>
                     <p>
-                      <%=datanews.News[2].title %>
-                        <%=datanews.News[13].title %>
+                      <%=allnewsest[2].title %>
+                        <%=allnewsest[0].title %>
                     </p>
                   </div>
                 </a>
@@ -172,39 +173,39 @@
       <div class="col-lg-3 flex-column align-items-end">
         <div class="menu-carousel d-flex flex-column position-relative justify-content-center active-highlight-selected" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="0">
-          <img src="<%=datanews.News[0].img %>" class="img-fluid" alt="">
+          <img src="<%=allnewsest[0].img %>" class="img-fluid" alt="">
           <div class="menu-carousel-content position-absolute">
             <h5>
-              <%=datanews.News[0].title %>
+              <%=allnewsest[0].title %>
             </h5>
 
             <i class="fa fa-calendar"></i>
             <span>
-              <%=datanews.News[0].date_publish %>
+              <%=allnewsest[0].NgayDang.substring(0,10) %>
             </span>
             <i class="fa fa-eye"></i>
             <span>
-              <%=datanews.News[0].views %>
+              <%=allnewsest[0]._views %>
             </span>
           </div>
 
         </div>
         <div class="menu-carousel d-flex flex-column position-relative mt-4 justify-content-center" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="1">
-          <img src="<%=datanews.News[13].img %>" class="img-fluid" alt="">
+          <img src="<%=allnewsest[1].img %>" class="img-fluid" alt="">
 
           <div class="menu-carousel-content position-absolute">
             <h5>
-              <%=datanews.News[13].title %>
+              <%=allnewsest[1].title %>
             </h5>
 
             <i class="fa fa-calendar"></i>
             <span>
-              <%=datanews.News[13].date_publish %>
+              <%=allnewsest[1].NgayDang.substring(0,10) %>
             </span>
             <i class="fa fa-eye"></i>
             <span>
-              <%=datanews.News[13].views %>
+              <%=allnewsest[1]._views %>
             </span>
           </div>
 
@@ -213,19 +214,19 @@
         </div>
         <div class="menu-carousel d-flex flex-column position-relative mt-3 justify-content-center" data-target="#carouselExampleControls"
           id="carousel-click" data-slide-to="2">
-          <img src="<%=datanews.News[2].img %>" class="img-fluid" alt="">
+          <img src="<%=allnewsest[2].img %>" class="img-fluid" alt="">
           <div class="menu-carousel-content position-absolute">
             <h5>
-              <%=datanews.News[2].title %>
+              <%=allnewsest[2].title %>
             </h5>
 
             <i class="fa fa-calendar"></i>
             <span>
-              <%=datanews.News[2].date_publish %>
+              <%=allnewsest[2].NgayDang.substring(0,10) %>
             </span>
             <i class="fa fa-eye"></i>
             <span>
-              <%=datanews.News[2].views %>
+              <%=allnewsest[2]._views %>
             </span>
           </div>
 
@@ -239,85 +240,120 @@
   </section>
   <section id="news" class="container mt-4 ">
     <div class="row mr-0">
-      <% for(var i=1;i<16;i= i+4) {%>
-      <div class="col-lg-3 category-1 position-relative">
-        <div class="hovereffect">
-          <img src=" <%=datanews.News[i].img %>" class="img-fluid" alt="">
-          <div class="overlay">
-            <a class="info" href="/news/<%=datanews.News[i].title %>">Read More</a>
+      <% for(var i=4;i<8;i++) {%>
+        <div class="col-lg-3 category-1 position-relative">
+          <div class="hovereffect">
+            <img src=" <%=allnewsest[i].img %>" class="img-fluid" alt="">
+            <div class="overlay">
+              <a class="info" href="/news/<%=allnewsest[i].title %>">Read More</a>
+            </div>
           </div>
+          <% if(allnewsest[i].TenLoai == "On top" ||allnewsest[i].TenLoai == "Supercars" ) {%>
+            <button class="btn btn-danger">
+              <%=allnewsest[i].TenLoai %>
+            </button>
+            <% }%>
+              <% if(allnewsest[i].TenLoai == "Funny") {%>
+                <button class="btn btn-success">
+                  <%=allnewsest[i].TenLoai %>
+                </button>
+                <% }%>
+                  <% if(allnewsest[i].TenLoai == "Celebrity") {%>
+                    <button class="btn btn-primary">
+                      <%=allnewsest[i].TenLoai %>
+                    </button>
+                    <% }%>
+                      <% if(allnewsest[i].TenLoai == "Motor") {%>
+                        <button class="btn btn-secondary text-light">
+                          <%=allnewsest[i].TenLoai %>
+                        </button>
+                        <% }%>
+                          <% if(allnewsest[i].TenLoai == "Modern") {%>
+                            <button class="btn btn-info text-light">
+                              <%=allnewsest[i].TenLoai %>
+                            </button>
+                            <% }%>
+                              <a href="/news/<%=allnewsest[i].title %>" class="link-tag-href">
+                                <div class="category-title">
+                                  <h6>
+                                    <%=allnewsest[i].title %>
+                                  </h6>
+                                  <i class="fa fa-calendar"></i>
+                                  <span>
+                                    <%=allnewsest[i].NgayDang.substring(0,10) %>
+                                  </span>
+                                  <i class="fa fa-eye"></i>
+                                  <span>
+                                    <%=allnewsest[i]._views %>50</span>
+                                </div>
+                              </a>
         </div>
-        <% if(datanews.News[i].kind == "On top") {%>
-        <button class="btn btn-danger"> <%=datanews.News[i].kind %></button>
-      <% }%>
-      <% if(datanews.News[i].kind == "Funny") {%>
-        <button class="btn btn-success"> <%=datanews.News[i].kind %></button>
-      <% }%>
-      <% if(datanews.News[i].kind == "Celebrity") {%>
-        <button class="btn btn-primary"> <%=datanews.News[i].kind %></button>
-      <% }%>
-      <% if(datanews.News[i].kind == "Motorcycles") {%>
-        <button class="btn btn-secondary text-light"> <%=datanews.News[i].kind %></button>
-      <% }%>
-      <a href="/news/<%=datanews.News[i].title %>" class="link-tag-href">
-        <div class="category-title">
-          <h6>     <%=datanews.News[i].title %></h6>
-          <i class="fa fa-calendar"></i>
-          <span> <%=datanews.News[i].date_publish %></span>
-          <i class="fa fa-eye"></i>
-          <span> <%=datanews.News[i].views %>50</span>
-        </div>
-      </a>
-      </div>
-      <% }%>
+        <% }%>
 
     </div>
   </section>
+  <!-- 2 NEWS RELATED -->
   <section id="news-second" class="container position-relative p-0">
     <div class="row news-second-content">
       <div class="col-lg-9">
-  
+
         <div class="row" id="news-second-container">
           <div class="col-lg-9">
-              <a href="/news/<%=datanews.News[2].title %>">
-            <img src="<%=datanews.News[2].img %>" class="img-fluid" alt="">
+            <a href="/news/<%=twonewsest[0].title %>">
+              <img src="<%=twonewsest[0].img %>" class="img-fluid" alt="">
             </a>
           </div>
           <div class="col-lg-3 d-flex flex-column justify-content-center">
-              <a href="/news/<%=datanews.News[2].title %>">
-            <button class="btn btn-danger font-weight-bold"><%=datanews.News[2].category %></button>
-            <div class="news2-title mt-2">
-              <h6><%=datanews.News[2].title %></h6>
-              <p>With the SLC going the way of the dodo, the SL will soon become the oldest model in Mercedes’ lineup. The current-generation
-                model (R231) was unveiled more thanng in the
-                tooth. Not to worry as an all-new SL iand AMG is responsible with development.</p>
-              <i class="fa fa-calendar"></i>
-              <span><%=datanews.News[2].date_publish %></span>
-              <i class="fa fa-eye"></i>
-              <span> <%=datanews.News[2].views %></span>
-            </div>
+            <a href="/news/<%=twonewsest[0].title %>">
+              <button class="btn btn-danger font-weight-bold">
+                <%=twonewsest[0].TenLoai %>
+              </button>
+              <div class="news2-title mt-2">
+                <h6>
+                  <%=twonewsest[0].title %>
+                </h6>
+                <p>With the SLC going the way of the dodo, the SL will soon become the oldest model in Mercedes’ lineup. The
+                  current-generation model (R231) was unveiled more thanng in the tooth. Not to worry as an all-new SL iand
+                  AMG is responsible with development.</p>
+                <i class="fa fa-calendar"></i>
+                <span>
+                  <%=twonewsest[0].NgayDang.substring(0,10) %>
+                </span>
+                <i class="fa fa-eye"></i>
+                <span>
+                  <%=twonewsest[0]._views %>
+                </span>
+              </div>
 
             </a>
           </div>
           <div class="col-lg-9 mt-3">
-              <a href="/news/<%=datanews.News[6].title %>">
-            <img src="<%=datanews.News[6].img %>" class="img-fluid" alt="">
-</a>
+            <a href="/news/<%=twonewsest[1].title %>">
+              <img src="<%=twonewsest[1].img %>" class="img-fluid" alt="">
+            </a>
           </div>
           <div class="col-lg-3 mt-3">
-              <a href="/news/<%=datanews.News[6].title %>">
-               
-            <button class="btn btn-primary font-weight-bold"><%=datanews.News[6].category %></button>
+            <a href="/news/<%=twonewsest[1].title %>">
 
-            <div class="news2-title mt-2">
-              <h6><%=datanews.News[6].title %></h6>
-              <p>With the SLC going the way of the dodo, the SL will soon b model in Mercedes’ lineup. The current-generation
-                model (R231) was unveiled more than sev is responsible with development.</p>
-              <i class="fa fa-calendar"></i>
-              <span><%=datanews.News[6].date_publish %></span>
-              <i class="fa fa-eye"></i>
-              <span> <%=datanews.News[6].views %></span>
-            </div>
+              <button class="btn btn-primary font-weight-bold">
+                <%=twonewsest[1].TenLoai %>
+              </button>
+
+              <div class="news2-title mt-2">
+                <h6>
+                  <%=twonewsest[1].title %>
+                </h6>
+                <p>With the SLC going the way of the dodo, the SL will soon b model in Mercedes’ lineup. The current-generation
+                  model (R231) was unveiled more than sev is responsible with development.</p>
+                <i class="fa fa-calendar"></i>
+                <span>
+                  <%=twonewsest[1].NgayDang.substring(0,10) %>
+                </span>
+                <i class="fa fa-eye"></i>
+                <span>
+                  <%=twonewsest[1]._views %>
+                </span>
+              </div>
             </a>
           </div>
         </div>
@@ -352,8 +388,10 @@
                   <!-- Category-1 -->
                   <div class="tab-pane fade show active" id="pills-humor-all" role="tabpanel" aria-labelledby="pills-all-humor-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 6 && baiviet.id <13){ %>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Humor" && i<6){
+                          i++; %>
                           <div class="col-lg-4 category-1 position-relative" style="height: 275px">
                             <div class="hovereffect">
                               <img src="<%= baiviet.img%>" class="img-fluid" alt="">
@@ -378,11 +416,11 @@
                                       </h6>
                                       <i class="fa fa-calendar"></i>
                                       <span>
-                                        <%=baiviet.date_publish %>
+                                        <%=baiviet.NgayDang.substring(0,10) %>
                                       </span>
                                       <i class="fa fa-eye"></i>
                                       <span>
-                                        <%=baiviet.views %>
+                                        <%=baiviet._views %>
                                       </span>
                                     </div>
 
@@ -397,86 +435,84 @@
                   <!-- Category-2 -->
                   <div class="tab-pane fade show " id="pills-funny" role="tabpanel" aria-labelledby="pills-funny-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 6 && baiviet.id <13){ %>
-                          <% if(baiviet.kind == "Funny"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Humor" && i<6 && baiviet.kind == "Funny"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-success">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-success">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
                   </div>
                   <!-- Category-3 -->
                   <div class="tab-pane fade" id="pills-weird" role="tabpanel" aria-labelledby="pills-weird-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 13 && baiviet.id > 6){ %>
-                          <% if(baiviet.kind == "Weird"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Humor" && i<6 && baiviet.kind == "Weird"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-info">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-info">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
 
@@ -527,8 +563,10 @@
                   <!-- Category-1 -->
                   <div class="tab-pane fade show active" id="pills-supercars-all" role="tabpanel" aria-labelledby="pills-all-supercars-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 7){ %>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Supercars" && i<6){
+                          i++; %>
                           <div class="col-lg-4 category-1 position-relative" style="height: 275px">
                             <div class="hovereffect">
                               <img src="<%= baiviet.img%>" class="img-fluid" alt="">
@@ -553,11 +591,11 @@
                                       </h6>
                                       <i class="fa fa-calendar"></i>
                                       <span>
-                                        <%=baiviet.date_publish %>
+                                        <%=baiviet.NgayDang.substring(0,10) %>
                                       </span>
                                       <i class="fa fa-eye"></i>
                                       <span>
-                                        <%=baiviet.views %>
+                                        <%=baiviet._views %>
                                       </span>
                                     </div>
 
@@ -572,86 +610,82 @@
                   <!-- Category-2 -->
                   <div class="tab-pane fade show " id="pills-ontop" role="tabpanel" aria-labelledby="pills-ontop-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 7){ %>
-                          <% if(baiviet.kind == "On top"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Supercars" && i<6 && baiviet.kind == "On top"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-danger">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-danger">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
                   </div>
                   <!-- Category-3 -->
                   <div class="tab-pane fade" id="pills-celebrity" role="tabpanel" aria-labelledby="pills-celebrity-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 7){ %>
-                          <% if(baiviet.kind == "Celebrity"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Supercars" && i<6 && baiviet.kind == "Celebrity"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-primary">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-primary">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
 
@@ -699,8 +733,10 @@
                   <!-- Category-1 -->
                   <div class="tab-pane fade show active" id="pills-motor-all" role="tabpanel" aria-labelledby="pills-all-motor-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 12 && baiviet.id <19){ %>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Motor" && i<6){
+                          i++; %>
                           <div class="col-lg-4 category-1 position-relative" style="height: 275px">
                             <div class="hovereffect">
                               <img src="<%= baiviet.img%>" class="img-fluid" alt="">
@@ -709,12 +745,12 @@
                               </div>
                             </div>
                             <% if(baiviet.kind == "Motorcycles"){ %>
-                              <button class="btn btn-secondary text-light font-weight-bold">
+                              <button class="btn btn-secondary font-weight-bold">
                                 <%=baiviet.kind %>
                               </button>
                               <% }%>
                                 <% if(baiviet.kind == "Motorhomes"){ %>
-                                  <button class="btn btn-warning font-weight-bold">
+                                  <button class="btn btn-warning text-dark font-weight-bold">
                                     <%=baiviet.kind %>
                                   </button>
                                   <% }%>
@@ -725,11 +761,11 @@
                                       </h6>
                                       <i class="fa fa-calendar"></i>
                                       <span>
-                                        <%=baiviet.date_publish %>
+                                        <%=baiviet.NgayDang.substring(0,10) %>
                                       </span>
                                       <i class="fa fa-eye"></i>
                                       <span>
-                                        <%=baiviet.views %>
+                                        <%=baiviet._views %>
                                       </span>
                                     </div>
 
@@ -744,86 +780,83 @@
                   <!-- Category-2 -->
                   <div class="tab-pane fade show " id="pills-motorcycle" role="tabpanel" aria-labelledby="pills-motorcycle-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 12 && baiviet.id <19){ %>
-                          <% if(baiviet.kind == "Motorcycles"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Motor" && i<6 && baiviet.kind == "Motorcycles"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-secondary font-weight-bold">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-secondary font-weight-bold">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
                   </div>
                   <!-- Category-3 -->
                   <div class="tab-pane fade" id="pills-mortorhomes" role="tabpanel" aria-labelledby="pills-mortorhomes-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 19 && baiviet.id > 12){ %>
-                          <% if(baiviet.kind == "Motorhomes"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Motor" && i<6 && baiviet.kind == "Motorhomes"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-warning font-weight-bold">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+
+                            <button class="btn btn-warning text-dark font-weight-bold">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
 
@@ -851,7 +884,7 @@
                 <div class="blog_main d-flex justify-content-start">
                   <div class="blog_main_heading_div">
                     <div class="blog_heading_div">
-                      <h3 class="bg-info text-light">Mordern</h3>
+                      <h3 class="bg-info text-light">Modern</h3>
                     </div>
                   </div>
                   <ul class="nav nav-pills mb-3 d-flex justify-content-center w-100" id="pills-tab" role="tablist">
@@ -875,8 +908,10 @@
                   <!-- Category-1 -->
                   <div class="tab-pane fade show active" id="pills-modern-all" role="tabpanel" aria-labelledby="pills-all-modern-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 18 && baiviet.id <25){ %>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Modern" && i<6){
+                          i++; %>
                           <div class="col-lg-4 category-1 position-relative" style="height: 275px">
                             <div class="hovereffect">
                               <img src="<%= baiviet.img%>" class="img-fluid" alt="">
@@ -885,7 +920,7 @@
                               </div>
                             </div>
                             <% if(baiviet.kind == "Technology"){ %>
-                              <button class="btn btn-primary text-light font-weight-bold">
+                              <button class="btn btn-primary font-weight-bold">
                                 <%=baiviet.kind %>
                               </button>
                               <% }%>
@@ -901,11 +936,11 @@
                                       </h6>
                                       <i class="fa fa-calendar"></i>
                                       <span>
-                                        <%=baiviet.date_publish %>
+                                        <%=baiviet.NgayDang.substring(0,10) %>
                                       </span>
                                       <i class="fa fa-eye"></i>
                                       <span>
-                                        <%=baiviet.views %>
+                                        <%=baiviet._views %>
                                       </span>
                                     </div>
 
@@ -920,86 +955,83 @@
                   <!-- Category-2 -->
                   <div class="tab-pane fade show " id="pills-technology" role="tabpanel" aria-labelledby="pills-technology-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id > 18 && baiviet.id <25){ %>
-                          <% if(baiviet.kind == "Technology"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Modern" && i<6 && baiviet.kind == "Technology"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-primary font-weight-bold">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+                            <button class="btn btn-primary font-weight-bold">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
                   </div>
                   <!-- Category-3 -->
                   <div class="tab-pane fade" id="pills-special" role="tabpanel" aria-labelledby="pills-special-tab">
                     <div class="row" style="min-height: 550px">
-                      <% datanews.News.forEach(function(baiviet){%>
-                        <% if(baiviet.id < 25 && baiviet.id > 18){ %>
-                          <% if(baiviet.kind == "Special"){ %>
-                            <div class="col-lg-4 category-1 position-relative" style="height: 275px">
-                              <div class="hovereffect">
-                                <img src="<%= baiviet.img%>" class="img-fluid" alt="">
-                                <div class="overlay h-50">
-                                  <a class="info" href="/news">Read More</a>
-                                </div>
+                      <% var i = 0 ; allnews.forEach(function(baiviet){%>
+
+                        <% if(baiviet.TenLoai == "Modern" && i<6 && baiviet.kind == "Special"){
+                          i++; %>
+                          <div class="col-lg-4 category-1 position-relative" style="height: 275px">
+                            <div class="hovereffect">
+                              <img src="<%= baiviet.img%>" class="img-fluid" alt="">
+                              <div class="overlay h-50">
+                                <a class="info" href="/news/<%=baiviet.title %>">Read More</a>
                               </div>
-
-                              <button class="btn btn-success font-weight-bold">
-                                <%=baiviet.kind %>
-                              </button>
-
-
-
-                              <div class="category-title">
-                                <h6>
-                                  <%=baiviet.title %>
-                                </h6>
-                                <i class="fa fa-calendar"></i>
-                                <span>
-                                  <%=baiviet.date_publish %>
-                                </span>
-                                <i class="fa fa-eye"></i>
-                                <span>
-                                  <%=baiviet.views %>
-                                </span>
-                              </div>
-
-
                             </div>
-                            <% }%>
-                              <% }%>
-                                <% }) %>
 
+
+                            <button class="btn btn-success font-weight-bold">
+                              <%=baiviet.kind %>
+                            </button>
+
+
+                            <div class="category-title">
+                              <h6>
+                                <%=baiviet.title %>
+                              </h6>
+                              <i class="fa fa-calendar"></i>
+                              <span>
+                                <%=baiviet.NgayDang.substring(0,10) %>
+                              </span>
+                              <i class="fa fa-eye"></i>
+                              <span>
+                                <%=baiviet._views %>
+                              </span>
+                            </div>
+
+
+                          </div>
+                          <% }%>
+                            <% }) %>
 
                     </div>
 
@@ -1032,20 +1064,24 @@
           <div class="side-bar-container-content">
             <ul>
               <% for(var i=0;i<16;i+=4) {%>
-              <li class="d-flex justify-content-start">
-                <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
-                <a href="/news/<%=datanews.News[0].title %>">
-                  <div class="side-bar-container-content-title">
+                <li class="d-flex justify-content-start">
+                  <img src="<%=allnews[i].img %>" class="img-fluid" alt="">
+                  <a href="/news/<%=allnews[i].title %>">
+                    <div class="side-bar-container-content-title">
 
-                    <h4>      <%=datanews.News[i].title %></h4>
-                    <i class="fa fa-calendar"></i>
-                    <span>      <%=datanews.News[i].date_publish %></span>
-                  </div>
-                </a>
+                      <h4>
+                        <%=allnews[i].title %>
+                      </h4>
+                      <i class="fa fa-calendar"></i>
+                      <span>
+                        <%=allnews[i].NgayDang.substring(0,10) %>
+                      </span>
+                    </div>
+                  </a>
 
-              </li>
-              <% }%>
-         
+                </li>
+                <% }%>
+
             </ul>
           </div>
         </div>
@@ -1058,23 +1094,27 @@
           </div>
 
           <div class="side-bar-container-content">
-              <ul>
-                  <% for(var i=1;i<16;i+=4) {%>
-                  <li class="d-flex justify-content-start">
-                    <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
-                    <a href="/news/<%=datanews.News[0].title %>">
-                      <div class="side-bar-container-content-title">
-    
-                        <h4>      <%=datanews.News[i].title %></h4>
-                        <i class="fa fa-calendar"></i>
-                        <span>      <%=datanews.News[i].date_publish %></span>
-                      </div>
-                    </a>
-    
-                  </li>
-                  <% }%>
-             
-                </ul>
+            <ul>
+              <% for(var i=1;i<16;i+=4) {%>
+                <li class="d-flex justify-content-start">
+                  <img src="<%=allnews[i].img %>" class="img-fluid" alt="">
+                  <a href="/news/<%=allnews[i].title %>">
+                    <div class="side-bar-container-content-title">
+
+                      <h4>
+                        <%=allnews[i].title %>
+                      </h4>
+                      <i class="fa fa-calendar"></i>
+                      <span>
+                        <%=allnews[i].NgayDang.substring(0,10) %>
+                      </span>
+                    </div>
+                  </a>
+
+                </li>
+                <% }%>
+
+            </ul>
           </div>
         </div>
         <!-- Side-bar-3 -->
@@ -1086,23 +1126,27 @@
           </div>
 
           <div class="side-bar-container-content">
-              <ul>
-                  <% for(var i=2;i<16;i+=4) {%>
-                  <li class="d-flex justify-content-start">
-                    <img src="<%=datanews.News[i].img %>" class="img-fluid" alt="">
-                    <a href="/news/<%=datanews.News[0].title %>">
-                      <div class="side-bar-container-content-title">
-    
-                        <h4>      <%=datanews.News[i].title %></h4>
-                        <i class="fa fa-calendar"></i>
-                        <span>      <%=datanews.News[i].date_publish %></span>
-                      </div>
-                    </a>
-    
-                  </li>
-                  <% }%>
-             
-                </ul>
+            <ul>
+              <% for(var i=2;i<16;i+=4) {%>
+                <li class="d-flex justify-content-start">
+                  <img src="<%=allnews[i].img %>" class="img-fluid" alt="">
+                  <a href="/news/<%=allnews[i].title %>">
+                    <div class="side-bar-container-content-title">
+
+                      <h4>
+                        <%=allnews[i].title %>
+                      </h4>
+                      <i class="fa fa-calendar"></i>
+                      <span>
+                        <%=allnews[i].NgayDang.substring(0,10) %>
+                      </span>
+                    </div>
+                  </a>
+
+                </li>
+                <% }%>
+
+            </ul>
           </div>
         </div>
       </div>
@@ -1110,7 +1154,7 @@
 
     </div>
   </section>
-
+  <!-- FOOTER -->
   <footer id="footer" class="bg-dark">
     <div class="footer-container container">
       <div class="row">
