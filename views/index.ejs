@@ -243,7 +243,7 @@
       <% for(var i=4;i<8;i++) {%>
         <div class="col-lg-3 category-1 position-relative">
           <div class="hovereffect">
-            <img src=" <%=allnewsest[i].img %>" class="img-fluid" alt="">
+            <img src=" <%=allnewsest[i].img %>" height="146px" class="img-fluid" alt="">
             <div class="overlay">
               <a class="info" href="/news/<%=allnewsest[i].title %>">Read More</a>
             </div>
@@ -274,17 +274,20 @@
                             </button>
                             <% }%>
                               <a href="/news/<%=allnewsest[i].title %>" class="link-tag-href">
-                                <div class="category-title">
+                                <div class="category-title mt-5">
                                   <h6>
                                     <%=allnewsest[i].title %>
                                   </h6>
-                                  <i class="fa fa-calendar"></i>
-                                  <span>
-                                    <%=allnewsest[i].NgayDang.substring(0,10) %>
-                                  </span>
-                                  <i class="fa fa-eye"></i>
-                                  <span>
-                                    <%=allnewsest[i]._views %>50</span>
+                                  <div>
+                                    <i class="fa fa-calendar"></i>
+                                    <span>
+                                      <%=allnewsest[i].NgayDang.substring(0,10) %>
+                                    </span>                                  
+                                    <i class="fa fa-eye"></i>
+                                    <span>
+                                      <%=allnewsest[i]._views %>50
+                                    </span>
+                                  </div>
                                 </div>
                               </a>
         </div>

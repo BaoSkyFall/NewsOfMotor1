@@ -153,57 +153,26 @@
                 </div>
                 <div class="news-comment">
                     <h3 class="d-block">All Comments about this post</h3>
+                    <% for(var i=0;i< comments.length;i++) {%>
+                    <div class="media mb-3">
 
-                    <div class="media">
-
-                        <img class="mr-3" src="../../../images/author-1.jpg" class="img-fluid" alt="Generic placeholder image">
+                        <img class="mr-3" src="<%=comments[i].avatar %>" class="img-fluid" alt="Generic placeholder image">
                         <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                            lacinia congue felis in faucibus.
+                            <h5 class="mt-0"><%=comments[i].HoTen %></h5>
+                         <p class="font-italic"> <%=comments[i].NgayBinhLuan.substring(0,10) %></p>
+                            <p>  <%=comments[i].NoiDung %></p>
                         </div>
                     </div>
-                    <div class="media">
+                    <% } %>
 
-                        <img class="mr-3" src="../../../images/author-1.jpg" class="img-fluid" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                            lacinia congue felis in faucibus.
+                    <form>
+                        <div class="form-group" style="border: 2px #007bff solid; padding: 10px">
+                            <img class="mr-3 img-fluid mb-3" width="100" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/20992957_509786432704462_6107894385925675733_n.jpg?_nc_cat=103&_nc_oc=AQntn67Go4O6T1V1CH17r7PnFEiQAu5HUjJPdNX6ms4S0XGoiPS2OuiJ5vFxWkqdL0ryHpU_SfADJ5fd4m_lBeu3&_nc_ht=scontent.fsgn2-2.fna&oh=6e782af042231dd107f8e8546db31740&oe=5D7B9D4A" class="img-fluid" alt="Generic placeholder image">                            
+                            <textarea class="form-control" id="commemt" rows="3" placeholder="Write here ..."></textarea>
+                            <button type="submit" class="btn btn-primary mb-2">Comment</button>
                         </div>
-                    </div>
-                    <div class="media">
-
-                        <img class="mr-3" src="../../../images/author-1.jpg" class="img-fluid" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                            lacinia congue felis in faucibus.
-                        </div>
-                    </div>
-                    <div class="media">
-
-                        <img class="mr-3" src="../../../images/author-1.jpg" class="img-fluid" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                            lacinia congue felis in faucibus.
-                        </div>
-                    </div>
-                    <div class="media">
-
-                        <img class="mr-3" src="../../../images/author-1.jpg" class="img-fluid" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                            lacinia congue felis in faucibus.
-                        </div>
-                    </div>
+                    </form>
+           
                 </div>
             </div>
 

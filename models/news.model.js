@@ -23,8 +23,8 @@ module.exports = {
       WHERE KINDs.Ten = "${kind}" AND BAIVIETs.IDKind = KINDs.IDKind  and BAIVIETs.IDTacGia = USERs.ID`)
     },
     getcommentbyID: id =>{
-      return db.load(`SELECT * FROM BINHLUANs \
-      WHERE IDBaiViet = ${id}`)
+      return db.load(`SELECT BINHLUANs.* ,USERs.avatar,USERs.HoTen FROM BINHLUANs,USERs WHERE \ 
+      BINHLUANs.IDDocGia = USERs.ID AND BINHLUANs.IDBaiViet = ${id}`)
     },
     getauthorbyID: id =>{
       return db.load(`SELECT USERs.* FROM BAIVIETs, USERs \

@@ -11,7 +11,8 @@ router.get('/', function (req, res, next) {
         var allnewsest = JSON.parse(JSON.stringify(rows));
         newsModel.get2newset().then(rows => {
           var newsest = JSON.parse(JSON.stringify(rows));
-          res.render('index', { title: 'Motor1 News Homepage', allnews: allnews, allnewsest: allnewsest, twonewsest: newsest });
+          var isLogin = false;
+          res.render('index', {isLogin:isLogin, title: 'Motor1 News Homepage', allnews: allnews, allnewsest: allnewsest, twonewsest: newsest });
 
         })
 
@@ -27,9 +28,10 @@ router.get('/news/:title', function (req, res, next) {
   console.log(req.params.title);
   newsModel.getnewsbyTitle(req.params.title).then(rows => {
     var news = JSON.parse(JSON.stringify(rows));
-    console.log(news[0].NoiDung);
+    console.log(news[0].ID);
     newsModel.getcommentbyID(news[0].ID).then(rows => {
       var comments = JSON.parse(JSON.stringify(rows));
+    
       res.render('news', { title: req.params.title, news: news, comments: comments });
 
     })
@@ -40,6 +42,7 @@ router.get('/news/:title', function (req, res, next) {
 
 });
 router.get('/admin/dashboard', function (req, res, next) {
+  
   res.render('dashboard', { title: 'News' });
 
 });
@@ -98,6 +101,21 @@ router.get('/admin/posts-table', function (req, res, next) {
     res.end('error occured.')
   });
 });
+router.post('/admin/check-pass', (req, res) => {
+  
+  adminModel.checkUsers(req.body.username,req.body.password).then(rows =>
+    {
+      // console.log(rows);
+      if(rows.length>0)
+      {
+        console.log("User correct");
+        var isLogIn = true;
+        res.redirect('/',);
+      }
+      else
+      console.log("User Incorrect");
+    })
+})
 router.get('/admin/posts-table/:title', function (req, res, next) {
   newsModel.getnewsbyTitle(req.params.title)
   .then(rows=>{
@@ -122,7 +140,7 @@ router.post('/admin/add-post', (req, res) => {
   //   console.log(err);
   //   res.end('error occured.')
   // });
-})
+});
   router.post('/admin/delete-post/:ID', (req, res) => {
     var i = req.params.ID;
     console.log(i);

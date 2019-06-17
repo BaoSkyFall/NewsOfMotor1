@@ -7,6 +7,8 @@ var createConnection = () => {
     user: '0aym5x8nPp',
     password: 'J6LJVOIc0H',
     database: '0aym5x8nPp',
+    dateStrings:true,
+    timezone: 'Z',
     typeCast: function castField(field, useDefaultTypeCasting) {
 
       // We only want to cast bit fields that have a single-bit in them. If the field
