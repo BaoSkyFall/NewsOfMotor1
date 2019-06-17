@@ -13,18 +13,18 @@ var createConnection = () => {
       // has more than one bit, then we cannot assume it is supposed to be a Boolean.
       if ((field.type === "BIT") && (field.length === 1)) {
 
-          var bytes = field.buffer();
+        var bytes = field.buffer();
 
-          // A Buffer in Node represents a collection of 8-bit unsigned integers.
-          // Therefore, our single "bit field" comes back as the bits '0000 0001',
-          // which is equivalent to the number 1.
-          return (bytes[0] === 1);
+        // A Buffer in Node represents a collection of 8-bit unsigned integers.
+        // Therefore, our single "bit field" comes back as the bits '0000 0001',
+        // which is equivalent to the number 1.
+        return (bytes[0] === 1);
 
       }
 
       return (useDefaultTypeCasting());
 
-  }
+    }
   });
 }
 
@@ -65,6 +65,9 @@ module.exports = {
       delete entity[idField];
 
       var sql = `update ${tableName} set ? where ${idField} = ?`;
+      console.log(sql);
+      console.log(id);
+
       var connection = createConnection();
       connection.connect();
       connection.query(sql, [entity, id], (error, value) => {
@@ -80,10 +83,11 @@ module.exports = {
 
   delete: (tableName, idField, id) => {
     return new Promise((resolve, reject) => {
-      var sql = `delete from ${tableName} where ${idField} = ?`;
+      console.log((Number.isInteger(parseInt(id))));
+      sql = `delete from ${tableName} where ${idField} = ?`;
       var connection = createConnection();
       connection.connect();
-      connection.query(sql, id, (error, value) => {
+      connection.query(sql,id, (error, value) => {
         if (error) {
           reject(error);
         } else {

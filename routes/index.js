@@ -58,15 +58,34 @@ router.get('/admin/users-table', function (req, res, next) {
   });
 
 });
-router.post('/admin/update-user', (req, res) => {
-  adminModel.updateUser(req.body).then(n => {
-    console.log(req.body);
-    res.redirect('/admin/user-table');
+router.post('/admin/add-user', (req, res) => {
+  adminModel.addUser(req.body).then(id => {
+    // console.log(id);
+    res.redirect('/admin/users-table');
   }).catch(err => {
     console.log(err);
     res.end('error occured.')
   });
 })
+router.post('/admin/update-user', (req, res) => {
+  adminModel.updateUser(req.body).then(n => {
+    res.redirect('/admin/users-table');
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+});
+router.post('/admin/delete-user/:ID', (req, res) => {
+  
+
+  var i = req.params.ID;
+  adminModel.deleteUser(i).then(n => {
+    res.redirect('/admin/users-table');
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+});
 router.get('/admin/posts-table', function (req, res, next) {
   newsModel.getallnews()
   .then(rows=>{
@@ -78,8 +97,31 @@ router.get('/admin/posts-table', function (req, res, next) {
     console.log(err);
     res.end('error occured.')
   });
-
 });
+router.get('/admin/posts-table/:title', function (req, res, next) {
+  newsModel.getnewsbyTitle(req.params.title)
+  .then(rows=>{
+    var data_post = JSON.parse(JSON.stringify(rows));
+    console.log(data_post);
+  
+    
+    res.render('write-post', { title: 'Edit Post',data_post: data_post });
+
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+});
+  router.post('/admin/delete-post/:ID', (req, res) => {
+    var i = req.params.ID;
+    console.log(i);
+    newsModel.deletePostbyID(i).then(n => {
+      res.redirect('/admin/posts-table');
+    }).catch(err => {
+      console.log(err);
+      res.end('error occured.')
+    });
+  });
 router.get('/admin/write-post', function (req, res, next) {
   res.render('write-post', { title: 'News' });
 

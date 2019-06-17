@@ -168,7 +168,7 @@
           <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables,
             please visit the
             <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
-          <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-primary btn-icon-split mr-4">
+          <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-primary btn-add btn-icon-split mr-4">
             <span class="icon text-white  ">
               <i class="fa fa-user-plus"></i>
             </span>
@@ -246,27 +246,26 @@
                             Độc Giả
                             <% }%>
                               <%  if(data_users[i].PhanHe == 2) {%>
-                                Phóng Viên 
+                                Phóng Viên
                                 <% }%>
-                                <%  if(data_users[i].PhanHe == 3) {%>
-                                  Quản trị viên
-                                 <% }%>
-                                <%  if(data_users[i].PhanHe == 4) {%>
-                                  Quản Lý
-                                <% }%>
+                                  <%  if(data_users[i].PhanHe == 3) {%>
+                                    Quản trị viên
+                                    <% }%>
+                                      <%  if(data_users[i].PhanHe == 4) {%>
+                                        Quản Lý
+                                        <% }%>
                         </td>
-                                              <td>
-                                                <button class="btn btn-primary" id="btn-edit" 
-                                                data-id="<%=data_users[i].ID %>"
-                                                data-name="<%=data_users[i].HoTen %>"
-                                                data-username="<%=data_users[i].username %>"
-                                                data-password="<%=data_users[i].pass %>"
-                                                data-email="<%=data_users[i].Email %>"
-                                                data-avatar="<%=data_users[i].avatar %>"
-                                                data-birthday="<%=data_users[i].NgaySinh.substring(0,10) %>"
-                                                data-phanhe="<%=data_users[i].PhanHe %>">Edit</button>
-                                                <button class="btn btn-danger" data-id="<%=data_users[i].ID %>">Delete</button>
-                                              </td>
+                        <td>
+                          <button class="btn btn-primary" id="btn-edit" data-id="<%=data_users[i].ID %>" data-name="<%=data_users[i].HoTen %>" data-username="<%=data_users[i].username %>"
+                            data-password="<%=data_users[i].pass %>" data-email="<%=data_users[i].Email %>" data-avatar="<%=data_users[i].avatar %>"
+                            data-birthday="<%=data_users[i].NgaySinh.substring(0,10) %>" data-phanhe="<%=data_users[i].PhanHe %>">Edit</button>
+
+                          <form action="">
+                            <button id="btn-delete2" class="btn btn-danger" type="submit" data-id="<%=data_users[i].ID %>" formmethod="post" formaction="/admin/delete-user/<%=data_users[i].ID %>">Delete</button>
+
+                          </form>
+                          </a>
+                        </td>
                       </tr>
                       <% } %>
                   </tbody>
@@ -280,7 +279,8 @@
 
       </div>
       <!-- End of Main Content -->
-      <!-- Modal content -->
+          <!-- End Modal content Add -->
+      <!-- Start Modal content Edit -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -291,7 +291,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form class="form-horizontal" name="form1" method="POST" action="/admin/update-user" role="form">
+              <form class="form-modal" name="form1" method="POST" action="/admin/update-user" role="form">
                 <fieldset>
 
                   <!-- Form Name -->
@@ -300,17 +300,17 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="textinput">ID User</label>
                     <div class="col-sm-10">
-                      <input id="id_input" disabled type="text" value="" name="ID" placeholder="" class="form-control">
+                      <input id="id_input" type="number" value="" name="ID" placeholder="" class="form-control">
                     </div>
                     <img src="" id="img_input" height="50px" class="img-fluid  mt-3" alt="">
                   </div>
                   <div class="form-group ">
-                      <label class="col-sm-2 control-label" for="textinput">Link Avatar</label>
-                      <div class="col-sm-10">
-                        <input id="avatar_input" type="text" value="" name="avatar" placeholder="" class="form-control">
-                      </div>
-                      <img src="" id="img_input" height="50px" class="img-fluid" alt="">
+                    <label class="col-sm-2 control-label" for="textinput">Link Avatar</label>
+                    <div class="col-sm-10">
+                      <input id="avatar_input" type="text" value="" name="avatar" placeholder="" class="form-control">
                     </div>
+                    <img src="" id="img_input" height="50px" class="img-fluid" alt="">
+                  </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="textinput">Name</label>
                     <div class="col-sm-10">
@@ -318,23 +318,23 @@
                     </div>
                   </div>
                   <div class="form-group">
-                      <label class="col-sm-2 control-label" for="textinput">Username</label>
-                      <div class="col-sm-10">
-                        <input id="username_input" type="text" value="" name="username" placeholder="" class="form-control">
-                      </div>
+                    <label class="col-sm-2 control-label" for="textinput">Username</label>
+                    <div class="col-sm-10">
+                      <input id="username_input" type="text" value="" name="username" placeholder="" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="textinput">Password</label>
-                        <div class="col-sm-10">
-                          <input id="password_input" type="text" value="" name="pass" placeholder="" class="form-control">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                          <label class="col-sm-2 control-label" for="textinput">Email</label>
-                          <div class="col-sm-10">
-                            <input id="email_input" type="email" value="" name="Email" placeholder="" class="form-control">
-                          </div>
-                        </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="textinput">Password</label>
+                    <div class="col-sm-10">
+                      <input id="password_input" type="text" value="" name="pass" placeholder="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="textinput">Email</label>
+                    <div class="col-sm-10">
+                      <input id="email_input" type="email" value="" name="Email" placeholder="" class="form-control">
+                    </div>
+                  </div>
                   <!-- Text input-->
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="textinput">Roles</label>
@@ -342,9 +342,9 @@
                       <select class="custom-select" name="PhanHe" id="role_input">
 
                         <option value=1>Độc giả</option>
-                        <option value=2 >Phóng Viên</option>
+                        <option value=2>Phóng Viên</option>
                         <option value=3>Quản Trị Viên</option>
-                        <option selected value=4 >Quản lý</option>
+                        <option selected value=4>Quản lý</option>
 
                       </select>
                     </div>
@@ -369,11 +369,12 @@
                 </div>
               </form>
             </div>
-        
+
           </div>
         </div>
       </div>
       <button href="#" data-toggle="modal" data-target="#exampleModalCenter" class="d-none btn-modal">test</button>
+      <!-- End Modal content Edit -->
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -400,8 +401,9 @@
   <% include template/logout-modal.ejs %>
 
     <% include template/footer-admin.ejs%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../javascripts/usertable.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+      <script src="../javascripts/usertable.js"></script>
 </body>
 
 </html>

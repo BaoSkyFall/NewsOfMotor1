@@ -166,9 +166,9 @@
 
                 <div class="input-group mb-3 ml-5 w-25">
                     <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>Choose Category</option>
+                        <option >Choose Category</option>
                         <option value="Classic">Classic</option>
-                        <option value="Supercars">Supercars</option>
+                        <option selected value="Supercars">Supercars</option>
                         <option value="Humor">Humor</option>
                     </select>
                     <div class="input-group-append">
@@ -177,8 +177,8 @@
                 </div>
                 <div class="d-flex justify-content-between container-fluid">
                     <div class="ml-4">
-                        <label for="" class="">Tags: </label>
-                        <input type="text" value="Classic,Sales" data-role="tagsinput">
+                        <label for="" class="">Kinds: </label>
+                        <input type="text" value="Classic,Sales" value="" data-role="tagsinput">
                         <a href="#" id="btn-submit" class=" btn btn-warning  btn-icon-split">
                             <span class="icon text-white  ">
                                 <i class="fa fa-rocket"></i>
@@ -194,9 +194,12 @@
                     <label for="inputTitle">Title: </label>
 
 
-                    <input type="text" class="form-control font-weight-bold" id="inputAddress" placeholder="Best Car Evers - One Direction">
+                    <input type="text" class="form-control font-weight-bold" value="<%=data_post[0].title %>" id="inputAddress" placeholder="Best Car Evers - One Direction">
+                
 
                 </div>
+          
+                
                 <!-- /.container-fluid -->
                 <div class="row d-flex justify-content-center">
                     <textarea name="editor1" id="editor1">&lt;p&gt;Blow your mind&lt;/p&gt;</textarea>
@@ -204,9 +207,15 @@
                         CKEDITOR.replace('editor1');
                         CKEDITOR.config.width = "93%";
                         CKEDITOR.config.height = 850;
+                 
+                        let html = `<%- data_post[0].NoiDung -%>`;
+                        console.log(html);
+                        CKEDITOR.instances['editor1'].setData(html);
+
                     </script>
 
                 </div>
+           
 
             </div>
             <!-- End of Main Content -->

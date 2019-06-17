@@ -29,6 +29,10 @@ module.exports = {
     getauthorbyID: id =>{
       return db.load(`SELECT USERs.* FROM BAIVIETs, USERs \
       WHERE BAIVIETs.ID = ${id} AND BAIVIETs.IDTacGia = USERs.ID`)
+    },
+    deletePostbyID: id =>{
+      return db.delete('BAIVIETs', 'ID', id);
+ 
     }
 
 

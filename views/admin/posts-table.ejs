@@ -275,8 +275,14 @@
                                         </td>
                                         
                                             <td>
-                                                <button class="btn btn-primary" data-id="<%=data_posts[i].ID %>">Edit</button>
-                                                <button class="btn btn-danger" data-id="<%=data_posts[i].ID %>">Delete</button>
+                                              <a href="/admin/posts-table/<%=data_posts[i].title %>">
+                                                  <button class="btn btn-primary" data-id="<%=data_posts[i].ID %>">Edit</button>
+
+                                              </a>
+                                                <form action="">
+                                                    <button id="btn-delete" class="btn btn-danger" type="submit"  formmethod="post" formaction="/admin/delete-post/<%=data_posts[i].ID %>">Delete</button>
+                                                  
+                                                </form>
                                               </td>
                                     
                       </tr>
