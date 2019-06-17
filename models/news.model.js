@@ -33,6 +33,12 @@ module.exports = {
     deletePostbyID: id =>{
       return db.delete('BAIVIETs', 'ID', id);
  
+    },
+    getallUsers: ()=>{
+      return db.load('SELECT * FROM USERs')
+    },
+    getallKinds: ()=>{
+      return db.load('SELECT * FROM KINDs')
     }
 
 

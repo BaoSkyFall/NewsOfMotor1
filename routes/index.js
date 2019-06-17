@@ -105,13 +105,24 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
     console.log(data_post);
   
     
-    res.render('write-post', { title: 'Edit Post',data_post: data_post });
+    res.render('edit-post', { title: 'Edit Post',data_post: data_post });
 
   }).catch(err => {
     console.log(err);
     res.end('error occured.')
   });
 });
+router.post('/admin/add-post', (req, res) => {
+  console.log(req.body);
+  // res.redirect('admin/write-post');
+  // adminModel.addUser(req.body).then(id => {
+  //   // console.log(id);
+  //   res.redirect('/admin/users-table');
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.end('error occured.')
+  // });
+})
   router.post('/admin/delete-post/:ID', (req, res) => {
     var i = req.params.ID;
     console.log(i);
@@ -123,7 +134,16 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
     });
   });
 router.get('/admin/write-post', function (req, res, next) {
-  res.render('write-post', { title: 'News' });
+  newsModel.getallUsers().then(rows=>{
+    var data_user = JSON.parse(JSON.stringify(rows));
+    newsModel.getallKinds().then(rows=>{
+      var data_kinds = JSON.parse(JSON.stringify(rows));
+
+      res.render('write-post', { title: 'Write new post',data_user:data_user,data_kinds:data_kinds });
+
+    })
+
+  })
 
 });
 //Get page by category
