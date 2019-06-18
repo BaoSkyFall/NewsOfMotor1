@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <% include template/header-admin.ejs %>
+
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="images/xe-login.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Join with Us today!</h1>
+                                    </div>
+                                    <form name="form1" method="POST" action="/register" class="user">
+                                        <div class="form-group">
+                                            <label for="">Your username</label>
+
+                                            <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Username...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Your password</label>
+
+                                            <input type="password" name="pass" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <input type="text" name="PhanHe" class="form-control d-none form-control-user" value="1" id="exampleInputEmail" aria-describedby="emailHelp"
+                                            placeholder="Enter Username...">
+
+                                            <div class="form-group">
+                                                    <label for="">Your Full name</label>
+        
+                                                    <input type="text" name="HoTen" class="form-control form-control-user" id="exampleInputPassword" placeholder="Email">
+                                                </div>
+                                        <div class="form-group">
+                                            <label for="">Your Email</label>
+
+                                            <input type="email" name="Email" class="form-control form-control-user" id="exampleInputPassword" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Your birthday</label>
+                                            <input type="date" name="NgaySinh" class="form-control form-control-user" id="exampleInputPassword" placeholder="Birthday">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Your avatar link</label>
+
+                                            <input type="text" name="avatar" class="form-control form-control-user" id="exampleInputPassword" placeholder="Link avatar">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Register
+                                        </button>
+                                        <hr>
+
+                                    </form>
+                                    <hr>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <% include template/footer-admin.ejs %>
+
+</body>
+
+</html>

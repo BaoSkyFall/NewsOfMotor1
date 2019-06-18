@@ -188,7 +188,7 @@
                     </div>
                     <div class="p-5 col-lg-6">
 
-                        <form class="user">
+                        <form class="user" method="POST" action="/profile/update">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <label for="">Full Name</label>
@@ -198,7 +198,7 @@
                                 <div class="col-sm-6">
                                     <label for="">Userame</label>
 
-                                    <input type="text" class="form-control form-control-user" name="username" id="exampleLastName" value="<%=userinfomation[0].username %>"
+                                    <input type="text" class="form-control form-control-user" readonly name="username" id="exampleLastName" value="<%=userinfomation[0].username %>"
                                         placeholder="User Name">
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                                 <input type="text" class="form-control form-control-user" name="avatar" id="exampleInputEmail" value="<%=userinfomation[0].avatar %>"
                                     placeholder="Link Avatar">
                             </div>
-                      
+                            <input type="text" class="d-none" name="ID" value="<%=userinfomation[0].ID %>">
                                     <input type="text" id="date_input" name="NgaySinh" value="<%=userinfomation[0].NgaySinh %>" placeholder="City" class="form-control d-none">
                                     
                                
@@ -224,13 +224,13 @@
                                     <label for="">Role</label>
 
                                     <% if(userinfomation[0].PhanHe ==1) {%>
-                                        <input type="text" class="form-control form-control-user" disabled id="exampleInputEmail" value="Độc Giả" placeholder="Email Address">
+                                        <input type="text" class="form-control form-control-user" readonly id="exampleInputEmail" value="Độc Giả" placeholder="Email Address">
                                         <% } else if(userinfomation[0].PhanHe ==2) {%>
-                                            <input type="text" class="form-control form-control-user" disabled id="exampleInputEmail" value="Phóng Viên" placeholder="Email Address">
+                                            <input type="text" class="form-control form-control-user" readonly id="exampleInputEmail" value="Phóng Viên" placeholder="Email Address">
                                             <% } else if(userinfomation[0].PhanHe ==3) {%>
-                                                <input type="text" class="form-control form-control-user" disabled id="exampleInputEmail" value="Quản Trị Viên" placeholder="Email Address">
+                                                <input type="text" class="form-control form-control-user" readonly id="exampleInputEmail" value="Quản Trị Viên" placeholder="Email Address">
                                                 <% } else if(userinfomation[0].PhanHe ==4) {%>
-                                                    <input type="text" class="form-control form-control-user" disabled id="exampleInputEmail" value="Quản Lý" placeholder="Email Address">
+                                                    <input type="text" class="form-control form-control-user" readonly id="exampleInputEmail" value="Quản Lý" placeholder="Email Address">
                                                     <% }%>
                                 </div>
                                 <!-- <div class="col-sm-6 mb-3 mb-sm-0">
@@ -244,14 +244,14 @@
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <label for="">Password</label>
 
-                                    <input type="text" class="form-control form-control-user" id="exampleInputPassword" value="<%=userinfomation[0].pass %>"
+                                    <input type="text" class="form-control form-control-user" name="pass" id="exampleInputPassword" value="<%=userinfomation[0].pass %>"
                                         placeholder="Password">
                                 </div>
 
                             </div>
-                            <a href="login.html" class="btn btn-primary btn-user btn-block">
+                            <button type="submit" class="btn btn-primary btn-user btn-block">
                                 UPDATE
-                            </a>
+                            </button>
 
 
                         </form>

@@ -178,8 +178,13 @@
                         <% if(isLogin){ %>
                         <div class="form-group" style="border: 2px #007bff solid; padding: 10px">
                             <img class="mr-3 img-fluid mb-3" width="100" src="<%=userinfomation[0].avatar %>" class="img-fluid" alt="Generic placeholder image">                            
-                            <textarea class="form-control" id="commemt" rows="3" placeholder="Write here ..."></textarea>
-                            <button type="submit" class="btn btn-primary mb-2 mt-2">Comment</button>
+                          
+                            <textarea class="form-control" id="commemt" rows="3" name="NoiDung" placeholder="Write here ..."></textarea>
+                            <input type="text" class="d-none" name="IDBaiViet" value="<%=news[0].ID %>">
+                            <input type="text" class="d-none" name="IDDocGia" value="<%=userinfomation[0].ID %>">
+                            <input type="date" class="d-none" id="input_NgayBinhLuan" name="NgayBinhLuan" value="">
+                            
+                            <button type="submit" formmethod="post" formaction="/comment/<%=title %>" class="btn btn-primary mb-2 mt-2">Comment</button>
                         </div>
 
                         <% } else {%>
@@ -364,6 +369,9 @@
 
     <script src="../../../javascripts/news.js"></script>
     <script src="../../../javascripts/owl.carousel.min.js"></script>
+    <script src="../../javascripts/moment.js"></script>
+
+    <script src="../../javascripts/write-post.js"></script>
 
 </body>
 

@@ -6,4 +6,6 @@ $(document).ready(function () {
     })
     var now =moment(new(Date)).format("YYYY-MM-DD");
     $('#input_NgayViet').val(now);
+    $('#input_NgayBinhLuan').val(now);
+    
 })

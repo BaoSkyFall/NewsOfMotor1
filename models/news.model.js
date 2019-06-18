@@ -4,7 +4,7 @@ module.exports = {
       return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind and BAIVIETs.IsAvailable = 1');
     },
     getallnewsinadmin: () =>{
-      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind');
+      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind ORDER BY BAIVIETs.ID ASC');
     },
     get8newset: () => {
       return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and BAIVIETs.IsAvailable = 1 and  KINDs.IDKind= BAIVIETs.IDKind ORDER BY ID DESC LIMIT 0,12');
@@ -48,6 +48,9 @@ module.exports = {
     },
     approvedPost: entity =>{
       return db.update("BAIVIETs","ID",entity)
+    },
+    addComment: entity =>{
+      return db.add("BINHLUANs",entity);
     }
 
 

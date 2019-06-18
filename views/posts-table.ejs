@@ -180,7 +180,7 @@
             </span>
             <span class="text">Add Post</span>
           </a>
-          <a href="#" class="btn btn-danger btn-icon-split mr-4">
+          <!-- <a href="#" class="btn btn-danger btn-icon-split mr-4">
             <span class="icon text-white  ">
               <i class="fa fa-trash"></i>
             </span>
@@ -197,7 +197,7 @@
               <i class="fa fa-check"></i>
             </span>
             <span class="text">Approved Many Posts</span>
-          </a>
+          </a> -->
           <!-- DataTales Users -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -291,7 +291,7 @@
                                                     <button id="btn-delete" class="btn btn-danger" type="submit"  formmethod="post" formaction="/admin/delete-post/<%=data_posts[i].ID %>">Delete</button>
                                                   
                                                 </form>
-                                                <% if(data_posts[0].IsAvailable == 0) {%>
+                                                <% if(data_posts[i].IsAvailable == 0) {%>
                                                 <form action="">
                                                   <button id="btn-approved" class="btn btn-warning" type="submit"  formmethod="post" formaction="/admin/approved-post/<%=data_posts[i].ID %>">Approved</button>
                                                 

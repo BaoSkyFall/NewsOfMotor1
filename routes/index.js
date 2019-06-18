@@ -148,6 +148,35 @@ router.get('/admin/profile', function (req, res, next) {
   }
 
 });
+router.post('/profile/update', (req, res) => {
+  console.log(req.body);
+  adminModel.updateUser(req.body).then(n => {
+    req.session.userinfomation = null;
+    console.log(req.body);
+    res.redirect('/admin/profile');
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+});
+router.post('/comment/:title', (req, res) => {
+  console.log(req.body);
+  var url = "/news/" + req.params.title;
+  newsModel.addComment(req.body).then(rows => {
+    res.redirect(url);
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+  // adminModel.updateUser(req.body).then(n => {
+  //   req.session.userinfomation = null;
+  //   console.log(req.body);
+  //   res.redirect('/admin/profile');
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.end('error occured.')
+  // });
+});
 router.get('/admin/users-table', function (req, res, next) {
   if (req.session.username) {
     if (!req.session.userinfomation) {
@@ -205,7 +234,9 @@ router.post('/admin/add-user', (req, res) => {
     res.end('error occured.')
   });
 })
+
 router.post('/admin/update-user', (req, res) => {
+  console.log(req.body);
   adminModel.updateUser(req.body).then(n => {
     res.redirect('/admin/users-table');
   }).catch(err => {
@@ -286,8 +317,10 @@ router.post('/admin/check-pass', (req, res) => {
       console.log(req.session.username);
       res.redirect("/");
     }
-    else
-      console.log("User Incorrect");
+    else {
+      res.redirect('/login');
+    }
+
   })
 })
 router.get('/admin/posts-table/:title', function (req, res, next) {
@@ -298,7 +331,7 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
         req.session.userinfomation = userinfomation;
       })
 
-      if (req.session.userinfomation[0].PhanHe > 3) {
+      if (req.session.userinfomation[0].PhanHe > 2) {
         newsModel.getallKinds().then(rows => {
           var data_kinds = JSON.parse(JSON.stringify(rows));
           newsModel.getnewsbyTitle(req.params.title)
@@ -323,7 +356,7 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
       }
     }
     else {
-      if (req.session.userinfomation[0].PhanHe > 3) {
+      if (req.session.userinfomation[0].PhanHe > 2) {
         newsModel.getallKinds().then(rows => {
           var data_kinds = JSON.parse(JSON.stringify(rows));
           newsModel.getnewsbyTitle(req.params.title)
@@ -414,7 +447,7 @@ router.post('/admin/approved-post/:ID', (req, res) => {
   var i = req.params.ID;
   var entity = {
     ID: i,
-    IsAvailable : 1
+    IsAvailable: 1
   }
   newsModel.approvedPost(entity).then(n => {
 
@@ -509,6 +542,23 @@ router.get('/login', function (req, res, next) {
   res.render('login', { title: 'Login to be our users' });
 
 });
+router.get('/register', function (req, res, next) {
+  res.render('register', { title: 'Register to be our users' });
+
+});
+router.post('/register', function (req, res, next) {
+  console.log(req.body);
+  adminModel.addUser(req.body).then(id => {
+    req.session.username = req.body.username;
+    req.session.password = req.body.pass;
+    res.redirect('/');
+
+  }).catch(err => {
+    console.log(err);
+    res.end('error occured.')
+  });
+});
+
 router.get('/logout', function (req, res, next) {
   req.session.destroy(function (err) {
     if (err) {

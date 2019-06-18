@@ -2,11 +2,11 @@ var mysql = require('mysql');
 
 var createConnection = () => {
   return mysql.createConnection({
-    host: 'localhost',
+    host: 'remotemysql.com',
     port: '3306',
-    user: 'root',
-    password: 'root',
-    database: 'newsmotor1',
+    user: '0aym5x8nPp',
+    password: 'J6LJVOIc0H',
+    database: '0aym5x8nPp',
     dateStrings:true,
     timezone: 'Z',
     typeCast: function castField(field, useDefaultTypeCasting) {
