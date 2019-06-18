@@ -31,14 +31,23 @@
 
             </div>
             <div class="header-contact-content-rightside">
+                <% if(!isLogin) {%>
                 <a href="/login">
-                    <button class="btn btn-primary" href="/login">Log In</button>
-
+                  <button class="btn btn-primary" href="/login">Log In</button>
+        
                 </a>
+            
                 <button class="btn btn-primary">Register</button>
-
-
-            </div>
+                <% } else {%>
+                  <a href="/admin/profile">
+                    <button class="btn btn-primary" href="/admin/profile">Hello, <%=userinfomation[0].username %></button>
+          
+                  </a>
+                  
+        
+        
+                  <% }%>
+              </div>
         </div>
 
 
@@ -166,11 +175,21 @@
                     <% } %>
 
                     <form>
+                        <% if(isLogin){ %>
                         <div class="form-group" style="border: 2px #007bff solid; padding: 10px">
-                            <img class="mr-3 img-fluid mb-3" width="100" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/20992957_509786432704462_6107894385925675733_n.jpg?_nc_cat=103&_nc_oc=AQntn67Go4O6T1V1CH17r7PnFEiQAu5HUjJPdNX6ms4S0XGoiPS2OuiJ5vFxWkqdL0ryHpU_SfADJ5fd4m_lBeu3&_nc_ht=scontent.fsgn2-2.fna&oh=6e782af042231dd107f8e8546db31740&oe=5D7B9D4A" class="img-fluid" alt="Generic placeholder image">                            
+                            <img class="mr-3 img-fluid mb-3" width="100" src="<%=userinfomation[0].avatar %>" class="img-fluid" alt="Generic placeholder image">                            
                             <textarea class="form-control" id="commemt" rows="3" placeholder="Write here ..."></textarea>
-                            <button type="submit" class="btn btn-primary mb-2">Comment</button>
+                            <button type="submit" class="btn btn-primary mb-2 mt-2">Comment</button>
                         </div>
+
+                        <% } else {%>
+                            <div class="form-group" style="border: 2px #007bff solid; padding: 10px">
+                                    <img class="mr-3 img-fluid mb-3" width="50" src="../../images/user.png" class="img-fluid" alt="Generic placeholder image">                            
+                                    <textarea class="form-control" disabled id="commemt" rows="3" placeholder="You must login to comment this post"></textarea>
+                                    <button type="" class="btn btn-primary mb-2 mt-2">Comment</button>
+                                </div>
+
+                            <% }%>
                     </form>
            
                 </div>

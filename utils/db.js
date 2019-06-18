@@ -2,11 +2,11 @@ var mysql = require('mysql');
 
 var createConnection = () => {
   return mysql.createConnection({
-    host: 'remotemysql.com',
+    host: 'localhost',
     port: '3306',
-    user: '0aym5x8nPp',
-    password: 'J6LJVOIc0H',
-    database: '0aym5x8nPp',
+    user: 'root',
+    password: 'root',
+    database: 'newsmotor1',
     dateStrings:true,
     timezone: 'Z',
     typeCast: function castField(field, useDefaultTypeCasting) {
@@ -40,6 +40,21 @@ module.exports = {
           reject(error);
         } else {
           resolve(results);
+        }
+        connection.end();
+      });
+    });
+  },
+  addnewPost: (tableName, entity) => {
+    return new Promise((resolve, reject) => {
+      var sql = `insert into ${tableName} set ?`;
+      var connection = createConnection();
+      connection.connect();
+      connection.query(sql, entity, (error, value) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(value.insertId);
         }
         connection.end();
       });

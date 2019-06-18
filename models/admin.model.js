@@ -24,6 +24,10 @@ module.exports = {
     },
     getUserbyusername: username =>{
         return db.load(`SELECT * FROM USERs WHERE USERs.username = "${username}"`)
+    },
+    addNewPost: entity => {
+        return db.addnewPost("BAIVIETs",entity);
     }
+
 
 }  

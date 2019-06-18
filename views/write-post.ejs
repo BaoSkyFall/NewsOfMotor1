@@ -19,21 +19,21 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-laugh-wink"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">S-Team
-                        <sup>2</sup>
-                    </div>
-                </a>
-        
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
-        
-                <!-- Nav Item - Dashboard -->
-                <% if(userinfomation[0].PhanHe == 4 || userinfomation[0].PhanHe == 3) {%>
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">S-Team
+                    <sup>2</sup>
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <% if(userinfomation[0].PhanHe == 4 || userinfomation[0].PhanHe == 3) {%>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/dashboard">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -41,69 +41,69 @@
                     </a>
                 </li>
                 <% } %>
-                <!-- Divider -->
-        
-        
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Personal </div>
-        
-                <!-- Nav Item - Pages Collapse Menu -->
-        
-        
-        
-        
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/profile">
-                        <i class="fa fa-user"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
-                <% if(userinfomation[0].PhanHe == 4 || userinfomation[0].PhanHe == 3 || userinfomation[0].PhanHe == 2) {%>
-        
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/write-post">
-                        <i class="fa fa-paper-plane"></i>
-                        <span>Write new post</span>
-                    </a>
-                </li>
-                <% } %>
-                <!-- Heading -->
-                <% if(userinfomation[0].PhanHe == 4) {%>
-                
-                <div class="sidebar-heading">
-                    Data
-                </div>
-                <hr class="sidebar-divider">
-                <!-- Nav Item - Pages Collapse Menu -->
-                <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/users-table">
-                        <i class="fa fa-users"></i>
-                        <span>Users Table</span>
-                    </a>
-                </li>
-                <% } %>
-                <% if(userinfomation[0].PhanHe == 4  || userinfomation[0].PhanHe == 3) {%>
-        
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/posts-table">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Posts Table</span>
-                    </a>
-                </li>
-                <% } %>
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-        
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
-        
-            </ul>
+                    <!-- Divider -->
+
+
+                    <!-- Heading -->
+                    <div class="sidebar-heading">
+                        Personal </div>
+
+                    <!-- Nav Item - Pages Collapse Menu -->
+
+
+
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/profile">
+                            <i class="fa fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <% if(userinfomation[0].PhanHe == 4 || userinfomation[0].PhanHe == 3 || userinfomation[0].PhanHe == 2) {%>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin/write-post">
+                                <i class="fa fa-paper-plane"></i>
+                                <span>Write new post</span>
+                            </a>
+                        </li>
+                        <% } %>
+                            <!-- Heading -->
+                            <% if(userinfomation[0].PhanHe == 4) {%>
+
+                                <div class="sidebar-heading">
+                                    Data
+                                </div>
+                                <hr class="sidebar-divider">
+                                <!-- Nav Item - Pages Collapse Menu -->
+                                <!-- Nav Item - Tables -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/users-table">
+                                        <i class="fa fa-users"></i>
+                                        <span>Users Table</span>
+                                    </a>
+                                </li>
+                                <% } %>
+                                    <% if(userinfomation[0].PhanHe == 4  || userinfomation[0].PhanHe == 3) {%>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/posts-table">
+                                                <i class="fas fa-fw fa-table"></i>
+                                                <span>Posts Table</span>
+                                            </a>
+                                        </li>
+                                        <% } %>
+                                            <!-- Divider -->
+                                            <hr class="sidebar-divider d-none d-md-block">
+
+                                            <!-- Sidebar Toggler (Sidebar) -->
+                                            <div class="text-center d-none d-md-inline">
+                                                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                                            </div>
+
+        </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -171,7 +171,7 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800 ml-5">Write new post</h1>
-                <form name="form1"  method="POST" action="/admin/add-post">
+                <form name="form1" method="POST" action="/admin/add-post">
                     <div class="input-group mb-3 ml-5 w-25">
                         <select class="custom-select" name="IDCategory" id="inputGroupSelect02">
                             <option selected>Choose Category</option>
@@ -206,15 +206,12 @@
                             <label class="input-group-text bg-gradient-warning text-light" for="inputGroupSelect02">Kinds</label>
                         </div>
                     </div>
-                    <div class=" form-group ml-5 w-50 mt-3">
 
-                        <label for="inputTitle">Author: </label>
-
-
-                        <input type="text" class="form-control font-weight-bold" value="" name="IDTacGia" id="inputAddress" placeholder="Author is User">
+                    <input type="number" class="form-control d-none font-weight-bold" value="<%=userinfomation[0].ID %>" name="IDTacGia" id="inputAddress"
+                        placeholder="Author is User">
 
 
-                    </div>
+
                     <div class=" form-group ml-5 w-50 mt-3">
 
                         <label for="inputTitle">Title: </label>
@@ -251,9 +248,10 @@
 
 
                     </div>
-                    <input class="d-none" type="text" name="_views" value="1">
+                    <input class="d-none" type="number" name="_views" value="1">
                     <input class="d-none" type="date" name="NgayViet" id="input_NgayViet" value="">
-                    <input class="d-none" type="date" name="NgayDang" id="input_NgayDang" value="">
+                    <input class="d-none" type="date" name="NgayDang" id="input_NgayViet" value="2019-06-18">
+                    <input class="d-none" type="number" name="isAvailable" id="isAvailable" value="0">
 
                     <!-- /.container-fluid -->
                     <div class="row d-flex justify-content-center">
@@ -307,6 +305,8 @@
     <% include template/logout-modal.ejs %>
         <!-- Bootstrap core JavaScript-->
         <% include template/footer-admin.ejs%>
+            <script src="../../javascripts/moment.js"></script>
+
             <script src="../../javascripts/write-post.js"></script>
 
 </body>

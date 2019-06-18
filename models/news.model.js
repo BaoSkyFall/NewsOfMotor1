@@ -1,22 +1,25 @@
 var db = require('../utils/db');
 module.exports = {
     getallnews: () =>{
+      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind and BAIVIETs.IsAvailable = 1');
+    },
+    getallnewsinadmin: () =>{
       return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind');
     },
     get8newset: () => {
-      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind ORDER BY ID DESC LIMIT 0,12');
+      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and BAIVIETs.IsAvailable = 1 and  KINDs.IDKind= BAIVIETs.IDKind ORDER BY ID DESC LIMIT 0,12');
     },
     get2newset: () => {
-      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind \
+      return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind and BAIVIETs.IsAvailable = 1 \
        ORDER BY ID DESC LIMIT 12,2');
     },
     getnewsbyTitle: title =>{
-      return db.load(`SELECT BAIVIETs.*, USERs.HoTen as author,USERs.avatar FROM BAIVIETs,USERs WHERE BAIVIETs.title ="${title}" and  BAIVIETs.IDTacGia = USERs.ID  `)
+      return db.load(`SELECT BAIVIETs.*, USERs.HoTen as author,USERs.avatar FROM BAIVIETs,USERs WHERE BAIVIETs.title ="${title}" and  BAIVIETs.IDTacGia = USERs.ID and BAIVIETs.IsAvailable = 1  `)
 
     },
     getnewsbyCATEGORY: category =>{
       return db.load(`SELECT BAIVIETs.*, USERs.HoTen,USERs.avatar FROM BAIVIETs, LOAIs,USERs \
-      WHERE LOAIs.TenLoai = "${category}" AND BAIVIETs.IDCategory = LOAIs.ID and BAIVIETs.IDTacGia = USERs.ID`)
+      WHERE LOAIs.TenLoai = "${category}" AND BAIVIETs.IDCategory = LOAIs.ID and BAIVIETs.IDTacGia = USERs.ID and BAIVIETs.IsAvailable = 1`)
     },
     getallnewsbyKIND: kind=>{
       return  db.load(`SELECT BAIVIETs.*,USERs.HoTen,USERs.avatar FROM BAIVIETs, KINDs,USERs \
@@ -39,6 +42,12 @@ module.exports = {
     },
     getallKinds: ()=>{
       return db.load('SELECT * FROM KINDs')
+    },
+    updatepost: entity =>{
+      return db.update("BAIVIETs","ID",entity);
+    },
+    approvedPost: entity =>{
+      return db.update("BAIVIETs","ID",entity)
     }
 
 

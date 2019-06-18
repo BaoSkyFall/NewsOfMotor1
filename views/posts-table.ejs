@@ -291,6 +291,12 @@
                                                     <button id="btn-delete" class="btn btn-danger" type="submit"  formmethod="post" formaction="/admin/delete-post/<%=data_posts[i].ID %>">Delete</button>
                                                   
                                                 </form>
+                                                <% if(data_posts[0].IsAvailable == 0) {%>
+                                                <form action="">
+                                                  <button id="btn-approved" class="btn btn-warning" type="submit"  formmethod="post" formaction="/admin/approved-post/<%=data_posts[i].ID %>">Approved</button>
+                                                
+                                              </form>
+                                              <% } %>
                                               </td>
                                     
                       </tr>

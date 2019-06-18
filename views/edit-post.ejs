@@ -171,31 +171,42 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800 ml-5">Write new post</h1>
-
+                <form name="form1" method="POST" action="/admin/edit-post">
+                    <input type="text" class="d-none" name="ID" value="<%=data_post[0].ID  %>">
                 <div class="input-group mb-3 ml-5 w-25">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select class="custom-select" name="IDCategory" id="inputGroupSelect02">
                         <option >Choose Category</option>
-                        <option value="Classic">Classic</option>
-                        <option selected value="Supercars">Supercars</option>
-                        <option value="Humor">Humor</option>
+                        <option
+                        <% if(data_post[0].IDCategory == 1){ %> selected <% }%>
+                        value="1">Supercars</option>
+                        <option   <% if(data_post[0].IDCategory == 2){ %> selected <% }%> value="2">Humor</option>
+                        <option    <% if(data_post[0].IDCategory == 3){ %> selected <% }%> value="3">Motor</option>
+                        <option    <% if(data_post[0].IDCategory == 4){ %> selected <% }%> value="4">Modern</option>
                     </select>
                     <div class="input-group-append">
                         <label class="input-group-text bg-gradient-primary text-light" for="inputGroupSelect02">Category</label>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between container-fluid">
-                    <div class="ml-4">
-                        <label for="" class="">Kinds: </label>
-                        <input type="text" value="Classic,Sales" value="" data-role="tagsinput">
-                        <a href="#" id="btn-submit" class=" btn btn-warning  btn-icon-split">
-                            <span class="icon text-white  ">
-                                <i class="fa fa-rocket"></i>
-                            </span>
-                            <span class="text">Submit your post</span>
-                        </a>
+                <div class="input-group mb-3 ml-5 w-25">
+                    <select class="custom-select" name="IDKind" id="inputGroupSelect02">
+                        <option selected>Choose Kinds</option>
+                        <% for(var i=0;i< data_kinds.length;i++) {%>
+                            <option
+                            <% if(data_post[0].IDKind == data_kinds[i].IDKind){ %> selected <% }%>
+                            value="<%=data_kinds[i].IDKind %>">
+                                <%=data_kinds[i].Ten %>
+                            </option>
+
+
+
+
+                            <% }%>
+
+
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text bg-gradient-warning text-light" for="inputGroupSelect02">Kinds</label>
                     </div>
-
-
                 </div>
                 <div class=" form-group ml-5 w-50 mt-3">
 
@@ -206,25 +217,65 @@
                 
 
                 </div>
-          
+                <div class=" form-group ml-5 w-50 mt-3">
+
+                    <label for="inputTitle">Subtitle: </label>
+
+
+                    <input type="text" class="form-control font-weight-bold" value="<%=data_post[0].subtitle %>" name="subtitle" id="inputAddress" placeholder="Your Subtitle">
+
+
+                </div>
+                <div class=" form-group ml-5 w-50 mt-3">
+
+                    <label for="inputTitle">Link image: </label>
+
+
+                    <input type="text" class="form-control font-weight-bold" name="img" value="<%=data_post[0].img %>" id="inputAddress" placeholder="Your link image">
+
+
+                </div>
+                <div class=" form-group ml-5 w-50 mt-3">
+
+                    <label for="inputTitle">Link Source: </label>
+
+
+                    <input type="text" class="form-control font-weight-bold" name="linkSrc" value="<%=data_post[0].linkSrc %>" id="inputAddress" placeholder="Your link source">
+
+
+                </div>
+                <input class="d-none" type="text" name="_views" value="<%=data_post[0]._views %>">
+                <input class="d-none" type="text" name="IDTacGia" value="<%=data_post[0].IDTacGia %>">
+                
+                <input class="d-none" type="text" name="NgayViet" id="input_NgayViet" value="<%=data_post[0].NgayViet %>">
+                <input class="d-none" type="text" name="NgayDang" id="input_NgayDang" value="<%=data_post[0].NgayDang %>">
+                <input class="d-none" type="number" name="IsAvailable" id="IsAvailable" value="<%=data_post[0].IsAvailable %>">
+
                 
                 <!-- /.container-fluid -->
                 <div class="row d-flex justify-content-center">
-                    <textarea name="editor1" id="editor1">&lt;p&gt;Blow your mind&lt;/p&gt;</textarea>
+                    <textarea name="NoiDung" id="NoiDung">&lt;p&gt;Blow your mind&lt;/p&gt;</textarea>
                     <script>
-                        CKEDITOR.replace('editor1');
+                        CKEDITOR.replace('NoiDung');
                         CKEDITOR.config.width = "93%";
                         CKEDITOR.config.height = 850;
                  
                         let html = `<%- data_post[0].NoiDung -%>`;
                         console.log(html);
-                        CKEDITOR.instances['editor1'].setData(html);
+                        CKEDITOR.instances['NoiDung'].setData(html);
 
                     </script>
 
                 </div>
-           
-
+                <div class="d-flex justify-content-start w-100 mt-3 ml-4">
+                    <button type="submit" id="btn-submit" class=" btn btn-warning  btn-icon-split">
+                        <span class="icon text-white  ">
+                            <i class="fa fa-rocket"></i>
+                        </span>
+                        <span type="submit" class="text">Submit your post</span>
+                    </button>
+                </div>
+                </form>
             </div>
             <!-- End of Main Content -->
 
@@ -253,7 +304,7 @@
     <% include template/logout-modal.ejs %>
         <!-- Bootstrap core JavaScript-->
         <% include template/footer-admin.ejs%>
-            <script src="../../javascripts/write-post.js"></script>
+
 
 </body>
 
