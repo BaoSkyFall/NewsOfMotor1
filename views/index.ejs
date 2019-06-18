@@ -24,13 +24,22 @@
 
       </div>
       <div class="header-contact-content-rightside">
+        <% if(!isLogin) {%>
         <a href="/login">
           <button class="btn btn-primary" href="/login">Log In</button>
 
         </a>
+    
         <button class="btn btn-primary">Register</button>
+        <% } else {%>
+          <a href="/admin/profile">
+            <button class="btn btn-primary" href="/admin/profile">Hello, <%=username %></button>
+  
+          </a>
+          
 
 
+          <% }%>
       </div>
     </div>
 

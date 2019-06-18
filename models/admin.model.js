@@ -21,6 +21,9 @@ module.exports = {
     },
     checkUsers: (user, pass) => {
         return db.load(`SELECT * FROM USERs WHERE USERs.username = "${user}" and USERs.pass="${pass}"`)
+    },
+    getUserbyusername: username =>{
+        return db.load(`SELECT * FROM USERs WHERE USERs.username = "${username}"`)
     }
 
 }  
