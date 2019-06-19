@@ -85,7 +85,7 @@
         <% } %>
         <% if(userinfomation[0].PhanHe == 4  || userinfomation[0].PhanHe == 3) {%>
 
-        <li class="nav-item active">
+        <li class="nav-item ">
             <a class="nav-link" href="/admin/posts-table">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Posts Table</span>
@@ -94,13 +94,13 @@
         <% } %>
         <% if(userinfomation[0].PhanHe == 4  || userinfomation[0].PhanHe == 3 || userinfomation[0].PhanHe == 2) {%>
 
-          <li class="nav-item ">
-              <a class="nav-link" href="/admin/personal-post">
-                  <i class="fas fa-fw fa-table"></i>
-                  <span>Personal Post</span>
-              </a>
-          </li>
-          <% } %>
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/personal-post">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Personal Post</span>
+                </a>
+            </li>
+            <% } %>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
@@ -300,12 +300,12 @@
                                                     <button id="btn-delete" class="btn btn-danger" type="submit"  formmethod="post" formaction="/admin/delete-post/<%=data_posts[i].ID %>">Delete</button>
                                                   
                                                 </form>
-                                                <% if(data_posts[i].IsAvailable == 0) {%>
+                                                <!-- <% if(data_posts[i].IsAvailable == 0) {%>
                                                 <form action="">
                                                   <button id="btn-approved" class="btn btn-warning" type="submit"  formmethod="post" formaction="/admin/approved-post/<%=data_posts[i].ID %>">Approved</button>
                                                 
                                               </form>
-                                              <% } %>
+                                              <% } %> -->
                                               </td>
                                     
                       </tr>

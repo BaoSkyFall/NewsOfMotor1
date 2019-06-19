@@ -39,6 +39,37 @@ router.get('/', function (req, res, next) {
     });
 
 });
+
+router.post('/search/title',function (req, res, next) {
+  console.log(req.body);
+  newsModel.searchbytitle(req.body.key).then(rows=>{
+    var news = JSON.parse(JSON.stringify(rows));
+    console.log(news);
+    if(news.length >1)
+    {
+      var isLogin;
+      if (req.session.username) {
+        isLogin = true;
+  
+      }
+      else {
+        isLogin = false;
+      }
+      var title= "Search result " + req.body.key;
+      res.render('search-result', {isLogin: isLogin, username: req.session.username, title: title, newsresult: news });
+  
+    }
+    else
+    {
+      var url= "/news/" + news[0].title;
+      res.redirect(url); 
+    }
+ 
+  }).catch(err => {
+    console.log(err);
+    res.redirect("/");
+  });
+});
 //Get news
 router.get('/news/:title', function (req, res, next) {
   console.log(req.params.title);
@@ -99,7 +130,12 @@ router.get('/admin/dashboard', function (req, res, next) {
         req.session.userinfomation = userinfomation;
       })
       if (req.session.userinfomation[0].PhanHe > 2) {
-        res.render('dashboard', { title: 'Admin dashboard', userinfomation: req.session.userinfomation });
+        adminModel.getdashboard().then(rows =>{
+        var dashboard = JSON.parse(JSON.stringify(rows));
+          console.log(dashboard[0]);
+          res.render('dashboard', { title: 'Admin dashboard', userinfomation: req.session.userinfomation,dashboard:dashboard });
+
+        })
 
       }
       else {
@@ -108,8 +144,12 @@ router.get('/admin/dashboard', function (req, res, next) {
     }
     else {
       if (req.session.userinfomation[0].PhanHe > 2) {
-        res.render('dashboard', { title: 'Admin dashboard', userinfomation: req.session.userinfomation });
-
+        adminModel.getdashboard().then(rows =>{
+          var dashboard = JSON.parse(JSON.stringify(rows));
+            console.log(dashboard[0]);
+            res.render('dashboard', { title: 'Admin dashboard', userinfomation: req.session.userinfomation,dashboard:dashboard });
+  
+          })
       }
       else {
         res.redirect('/admin/profile');
@@ -185,7 +225,7 @@ router.get('/admin/users-table', function (req, res, next) {
         req.session.userinfomation = userinfomation;
       })
 
-      if (req.session.userinfomation[0].PhanHe > 2) {
+      if (req.session.userinfomation[0].PhanHe > 3) {
         adminModel.getallUsers().then(rows => {
           var data_users = JSON.parse(JSON.stringify(rows));
           res.render('users-table', { title: 'Table of all Users', userinfomation: req.session.userinfomation, data_users: data_users });
@@ -200,7 +240,7 @@ router.get('/admin/users-table', function (req, res, next) {
       }
     }
     else {
-      if (req.session.userinfomation[0].PhanHe > 2) {
+      if (req.session.userinfomation[0].PhanHe > 3) {
         adminModel.getallUsers().then(rows => {
           var data_users = JSON.parse(JSON.stringify(rows));
           res.render('users-table', { title: 'Table of all Users', userinfomation: req.session.userinfomation, data_users: data_users });
@@ -307,6 +347,59 @@ router.get('/admin/posts-table', function (req, res, next) {
 
 
 });
+
+router.get('/admin/personal-post', function (req, res, next) {
+  if (req.session.username) {
+    if (!req.session.userinfomation) {
+      adminModel.getUserbyusername(req.session.username).then(rows => {
+        var userinfomation = JSON.parse(JSON.stringify(rows));
+        req.session.userinfomation = userinfomation;
+      })
+
+      if (req.session.userinfomation[0].PhanHe > 1) {
+        newsModel.getallnewsbyUsername(req.session.username)
+          .then(rows => {
+            var data_posts = JSON.parse(JSON.stringify(rows));
+            console.log(data_posts);
+
+            res.render('personal-post', { title: 'Table of all Post', userinfomation: req.session.userinfomation, data_posts: data_posts });
+
+          }).catch(err => {
+            console.log(err);
+            res.end('error occured.')
+          });
+      }
+      else {
+        res.redirect('admin/profile');
+      }
+    }
+    else {
+      if (req.session.userinfomation[0].PhanHe > 1) {
+        newsModel.getallnewsbyUsername(req.session.username)
+          .then(rows => {
+            var data_posts = JSON.parse(JSON.stringify(rows));
+            console.log(data_posts);
+            res.render('personal-post', { title: 'Table of all Post', data_posts: data_posts, userinfomation: req.session.userinfomation });
+
+          }).catch(err => {
+            console.log(err);
+            res.end('error occured.')
+          });
+      }
+      else {
+        res.redirect('/admin/profile');
+      }
+    }
+
+
+  }
+  else {
+    res.redirect("/login");
+  }
+
+
+
+});
 router.post('/admin/check-pass', (req, res) => {
 
   adminModel.checkUsers(req.body.username, req.body.password).then(rows => {
@@ -334,7 +427,7 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
       if (req.session.userinfomation[0].PhanHe > 2) {
         newsModel.getallKinds().then(rows => {
           var data_kinds = JSON.parse(JSON.stringify(rows));
-          newsModel.getnewsbyTitle(req.params.title)
+          newsModel.getnewsbyTitleinadmin(req.params.title)
             .then(rows => {
               var data_post = JSON.parse(JSON.stringify(rows));
               console.log(data_post);
@@ -359,7 +452,7 @@ router.get('/admin/posts-table/:title', function (req, res, next) {
       if (req.session.userinfomation[0].PhanHe > 2) {
         newsModel.getallKinds().then(rows => {
           var data_kinds = JSON.parse(JSON.stringify(rows));
-          newsModel.getnewsbyTitle(req.params.title)
+          newsModel.getnewsbyTitleinadmin(req.params.title)
             .then(rows => {
               var data_post = JSON.parse(JSON.stringify(rows));
               console.log(data_post);
@@ -514,8 +607,15 @@ router.get('/category-:cat', function (req, res, next) {
   newsModel.getnewsbyCATEGORY(req.params.cat).then(rows => {
     var newscategory = JSON.parse(JSON.stringify(rows));
     var title = "News of Motor1 " + req.params.cat + " Category"
+    var isLogin;
+    if (req.session.username) {
+      isLogin = true;
 
-    res.render('page', { category: req.params.cat, title: title, newscategory: newscategory });
+    }
+    else {
+      isLogin = false;
+    }
+    res.render('page', { category: req.params.cat,isLogin: isLogin, username: req.session.username, title: title, newscategory: newscategory });
 
   }).catch(err => {
     console.log(err);
@@ -530,7 +630,15 @@ router.get('/category-:cat/:kind', function (req, res, next) {
     var newskind = JSON.parse(JSON.stringify(rows));
     var title = "News of Motor1 " + req.params.cat + " Category" + req.params.kind + " Kind"
     console.log(newskind);
-    res.render('page-kind', { category: req.params.cat, kind: req.params.kind, title: title, newskind: newskind });
+    var isLogin;
+    if (req.session.username) {
+      isLogin = true;
+
+    }
+    else {
+      isLogin = false;
+    }
+    res.render('page-kind', { category: req.params.cat,isLogin: isLogin, username: req.session.username, kind: req.params.kind, title: title, newskind: newskind });
 
   }).catch(err => {
     console.log(err);

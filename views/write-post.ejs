@@ -95,6 +95,15 @@
                                             </a>
                                         </li>
                                         <% } %>
+                                        <% if(userinfomation[0].PhanHe == 4  || userinfomation[0].PhanHe == 3 || userinfomation[0].PhanHe == 2) {%>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/admin/personal-post">
+                                                    <i class="fas fa-fw fa-table"></i>
+                                                    <span>Personal Post</span>
+                                                </a>
+                                            </li>
+                                            <% } %>
                                             <!-- Divider -->
                                             <hr class="sidebar-divider d-none d-md-block">
 
@@ -260,9 +269,6 @@
                             CKEDITOR.replace('editor1');
                             CKEDITOR.config.width = "93%";
                             CKEDITOR.config.height = 850;
-
-
-
                         </script>
 
 

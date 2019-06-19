@@ -18,6 +18,48 @@
 </head>
 
 <body>
+    
+  <section id="header-contact">
+ 
+        <div class="d-flex d-inline justify-content-between container">
+          <div>
+              <form method="POST" action="/search/title" class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" name="key" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+                </form>
+          </div>
+        
+              <div>
+                  <div class="header-contact-content d-flex align-items-center">
+                      <i class="fa fa-phone"></i>
+                      <span>Hotline: 0938443767</span>
+              
+                    </div>
+                    <div class="header-contact-content-rightside">
+                      <% if(!isLogin) {%>
+                      <a href="/login">
+                        <button class="btn btn-primary" href="/login">Log In</button>
+              
+                      </a>
+                  
+                      <button class="btn btn-primary">Register</button>
+                      <% } else {%>
+                        <a href="/admin/profile">
+                          <button class="btn btn-primary" href="/admin/profile">Hello, <%=username %></button>
+                
+                        </a>
+                        
+              
+              
+                        <% }%>
+                    </div>
+              </div>
+      
+        </div>
+    
+    
+    
+      </section>
     <header id="menu" class="container-fluid">
         <div class="logo d-flex justify-content-center">
             <a href="/">
@@ -169,7 +211,7 @@
                             </div>
                             <div class="blog_technology_slider">
                                 <%  i =0;
-                                for(var i=0;i<3;i++) {%>
+                                for(var i=0;i<newskind.length;i++) {%>
                                   
                                         <div class="blog_post_style2 wow fadeInUp">
                                             <div class="row p-0">

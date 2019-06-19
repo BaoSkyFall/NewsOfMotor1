@@ -6,6 +6,9 @@ module.exports = {
     getallnewsinadmin: () =>{
       return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind ORDER BY BAIVIETs.ID ASC');
     },
+    getallnewsbyUsername: username =>{
+      return db.load(`SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs,USERs WHERE LOAIs.ID = BAIVIETs.IDCategory and KINDs.IDKind= BAIVIETs.IDKind and USERs.ID = BAIVIETs.IDTacGia and USERs.username = "${username}" ORDER BY BAIVIETs.ID ASC`)
+    },
     get8newset: () => {
       return db.load('SELECT BAIVIETs.*,LOAIs.TenLoai,KINDs.Ten as kind from BAIVIETs,LOAIs,KINDs WHERE LOAIs.ID = BAIVIETs.IDCategory and BAIVIETs.IsAvailable = 1 and  KINDs.IDKind= BAIVIETs.IDKind ORDER BY ID DESC LIMIT 0,12');
     },
@@ -15,6 +18,10 @@ module.exports = {
     },
     getnewsbyTitle: title =>{
       return db.load(`SELECT BAIVIETs.*, USERs.HoTen as author,USERs.avatar FROM BAIVIETs,USERs WHERE BAIVIETs.title ="${title}" and  BAIVIETs.IDTacGia = USERs.ID and BAIVIETs.IsAvailable = 1  `)
+
+    },
+    getnewsbyTitleinadmin: title =>{
+      return db.load(`SELECT BAIVIETs.*, USERs.HoTen as author,USERs.avatar FROM BAIVIETs,USERs WHERE BAIVIETs.title ="${title}" and  BAIVIETs.IDTacGia = USERs.ID `)
 
     },
     getnewsbyCATEGORY: category =>{
@@ -51,6 +58,9 @@ module.exports = {
     },
     addComment: entity =>{
       return db.add("BINHLUANs",entity);
+    },
+    searchbytitle: key =>{
+      return db.load(`SELECT BAIVIETs.*,USERs.avatar FROM BAIVIETs,USERs WHERE BAIVIETs.title LIKE '%${key}%' and BAIVIETs.IDTacGia = USERs.ID`);
     }
 
 
